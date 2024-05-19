@@ -79,3 +79,48 @@ document.addEventListener("DOMContentLoaded", function() {
     startSlider(); // Reinicia el slider después de avanzar
   });
 });
+
+
+
+// ======= COTIZADOR ========//
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('calcular').addEventListener('click', function() {
+      // Obtener el precio del producto seleccionado
+      var productoSelect = document.getElementById('producto');
+      var precio = parseFloat(productoSelect.options[productoSelect.selectedIndex].getAttribute('data-precio'));
+      
+      // Obtener la cantidad seleccionada
+      var cantidad = parseInt(document.getElementById('cantidad').value);
+      
+      // Calcular el valor total
+      var valorTotal = precio * cantidad;
+      
+      // Formatear el valor total a pesos colombianos
+      var valorTotalCOP = valorTotal.toLocaleString('es-CO', { style: 'currency', currency: 'COP' });
+      
+      // Mostrar el valor total en el campo correspondiente
+      document.getElementById('valor-total').value = valorTotalCOP;
+  });
+
+  // Asegurarse de que los elementos del slide también estén listos
+  var slides = document.querySelectorAll('.slide');
+  if (slides.length > 0) {
+      var currentSlide = 0;
+
+      function showSlide(index) {
+          slides.forEach(function(slide, i) {
+              slide.style.display = (i === index) ? 'block' : 'none';
+          });
+      }
+
+      function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+      }
+
+      showSlide(currentSlide);
+      document.getElementById('next-slide').addEventListener('click', nextSlide);
+  }
+});
+

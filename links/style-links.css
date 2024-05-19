@@ -1,0 +1,203 @@
+:root {
+    --color_primario: #6495ed;
+    --color_primario_suave: #add8e6;
+    --color_blanco: #fff;
+    --altura_header: 80px;
+    --padding_left_rigth: 2rem;
+    --ancho_maximo: 1200px;
+  }
+
+
+  body {
+    font-family: "Alata", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+body::before {
+    content: "";
+    position: fixed; /* Cambiado a fixed para que ocupe toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/wallpaper.png'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Cambiado a cover para que la imagen cubra toda la pantalla */
+    background-position: center;
+    opacity: 0.5; /* Opacidad del 50% */
+    z-index: -1;
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+/*=========== CATALOGO DE PRODUCTOS =========*/
+
+.product-catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+    width: calc(25% - 2rem); /* Ajuste para 4 tarjetas por fila */
+    box-sizing: border-box;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out; /* Añadir transición suave para el resplandor */
+}
+
+.product:hover {
+    box-shadow: 0 0 15px #6495ed; /* Añadir resplandor con color #6495ed */
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out; /* Añadir transición suave */
+}
+
+.product-image:hover {
+    transform: scale(3); /* Aumentar tamaño a 3 veces */
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.product-catalog button {
+    background-color: var(--color_primario);
+    color: var(--color_blanco);
+    font-size: 20px;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.product-catalog button:hover {
+    background-color: var(--color_primario_suave);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .product {
+        width: calc(33.33% - 2rem); /* Ajuste para 3 tarjetas por fila */
+    }
+}
+
+@media (max-width: 900px) {
+    .product {
+        width: calc(50% - 2rem); /* Ajuste para 2 tarjetas por fila */
+    }
+}
+
+@media (max-width: 600px) {
+    .product {
+        width: calc(100% - 2rem); /* Ajuste para 1 tarjeta por fila */
+    }
+}
+
+.cotizar{
+    background-color: #333;
+    color: var(--color_blanco);
+    text-align: center;
+    padding: 20px;
+}
+.cotizar h1{
+    font-size: 30px;
+    font-weight: normal;
+}
+.cotizar button {
+    background-color:var(--color_primario);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    margin-top: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.cotizar button:hover {
+    background-color: var(--color_primario_suave);
+}
+
+ /*========= COTIZADOR ===========*/
+ 
+.cotiza {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+.cotiza h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 0.5rem;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%;
+    font-size: 20px;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.cotiza button {
+    background-color: var(--color_primario);
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.cotiza button:hover {
+    background-color: var(--color_primario_suave);
+}

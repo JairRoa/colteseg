@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="COLTESEG ofrece sistemas de seguridad completos y personalizados para hogares y negocios en Bogotá. Cámaras de seguridad, alarmas, automatización y más."
+        />
+        <title>COTIZA - Cámaras para Hogares y Negocios en Bogotá</title>
+        <link rel="icon" href="img/logo.png" type="image/x-icon" />
+        <meta
+          name="description"
+          content="Empresa especializada en sistemas de seguridad, alarmas y cámaras de seguridad en Bogotá. Protege tu hogar o negocio con nuestros servicios de seguridad avanzados."
+        />
+        <meta
+          name="keywords"
+          content="cámaras de seguridad, sistemas de seguridad, alarmas, Bogotá"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link rel="icon" type="image/png" href="img/icon.png" />
+        <link rel="stylesheet" href="/links/style-links.css" />
+    </head>
+<body>
+
+    <section id="cotiza" class="cotiza">
+        <h2>Cotiza la instalación de tu sistema de seguridad en Bogotá</h2>
+        <form id="calculator-form">
+            <div class="form-group">
+                <label for="producto">Seleccione un producto:</label>
+                <select id="producto" name="producto">
+                    <option value="" data-precio="0">Seleccione un producto</option>
+                    <option value="Cámara de Seguridad HD 1" data-precio="280000">KIT SEGURIDAD x4, INTERIOR 1080p</option>
+                    <option value="Cámara de Seguridad HD 2" data-precio="320000">KIT SEGURIDAD x4, EXTERIOR 1080p</option>
+                    <option value="Cámara de Seguridad HD 3" data-precio="480000">KIT SEGURIDAD x8, INTERIOR 1080p</option>
+                    <option value="Cámara de Seguridad HD 4" data-precio="520000">KIT SEGURIDAD x8, EXTERIOR 1080p</option>
+                    <option value="Cámara de Seguridad HD 5" data-precio="890000">KIT SEGURIDAD x16, INTERIOR 1080p</option>
+                    <option value="Cámara de Seguridad HD 6" data-precio="920000">KIT SEGURIDAD x16, EXTERIOR 1080p</option>
+                    <option value="Cámara de Seguridad HD 7" data-precio="1700000">KIT SEGURIDAD x32, INTERIOR 1080p</option>
+                    <option value="Cámara de Seguridad HD 8" data-precio="1750000">KIT SEGURIDAD x32, EXTERIOR 1080p</option>
+                    <option value="Cámara de Seguridad HD 9" data-precio="50000">Cámara de Seguridad Dahua interior</option>
+                    <option value="Cámara de Seguridad HD 10" data-precio="60000">Cámara de Seguridad Dahua exterior</option>
+                    <option value="Cámara de Seguridad HD 11" data-precio="60000">Cámara de Seguridad Dahua IP interior</option>
+                    <option value="Cámara de Seguridad HD 12" data-precio="80000">Cámara de Seguridad Dahua IP exterior</option>
+                    <option value="Cámara de Seguridad HD 13" data-precio="60000">DVR Dahua 4 canales 1080p</option>
+                    <option value="Cámara de Seguridad HD 14" data-precio="60000">DVR Dahua 8 canales 1080p</option>
+                    <option value="Cámara de Seguridad HD 15" data-precio="80000">DVR Dahua 16 canales 1080p</option>
+                    <option value="Cámara de Seguridad HD 16" data-precio="100000">DVR Dahua 32 canales 1080p</option>
+                    <option value="Cámara de Seguridad HD 17" data-precio="30000">Disco duro mecánico IDE 1Tb</option>
+                    <option value="Cámara de Seguridad HD 18" data-precio="50000">Disco duro mecánico IDE 4Tb</option>
+                    <option value="Cámara de Seguridad HD 19" data-precio="80000">Disco duro mecánico IDE 8Tb</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <select id="cantidad" name="cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="valor-total">Valor total:</label>
+                <input type="text" id="valor-total" name="valor-total" readonly>
+            </div>
+            <button type="button" id="calcular">Calcular</button>
+        </form>
+    </section>
+
+
+    <section id="volver" class="volver">
+        <h1>VUELVE AL INICIO</h1>
+        <a href="/index.html">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+        </a>
+    </section>
+
+    <script src="/script.js"></script>
+</body>
+</html>
