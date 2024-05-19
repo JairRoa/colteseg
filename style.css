@@ -56,6 +56,7 @@ ul {
   height: calc(100vh - var(--altura_header));
 }
 
+
 .logo {
   color: var(--color_blanco);
 }
@@ -125,7 +126,7 @@ ul {
   overflow: hidden;
   width: 100%;
   margin-top: 80px;
-  position: relative; /* Agrega posición relativa para que los botones absolutos se posicionen correctamente */
+  position: relative; /* Agrega posición relativa para alinear correctamente los botones absolutos */
 }
 
 .slider {
@@ -147,11 +148,11 @@ ul {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5); /* Agrega un fondo con opacidad */
+  background: rgba(0, 0, 0, 0.5); /* Agrega opacidad al fondo */
   color: white;
   font-size: 20px;
   cursor: pointer;
-  transition: transform 0.3s, color 0.3s;
+  transition: transform 0.3s, color 0.3s, background-color 0.3s; /* Agrega transición de color de fondo */
   padding: 10px; /* Ajusta el espacio interior */
   border-radius: 50%; /* Hace que los botones sean redondos */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Agrega una sombra suave */
@@ -160,6 +161,7 @@ ul {
 .prev-button:hover,
 .next-button:hover {
   color: var(--color_primario);
+  background-color: rgba(0, 0, 0, 0.7); /* Oscurece el fondo al pasar el mouse */
   transform: translateY(-50%) scale(1.2); /* Aplica un ligero zoom al pasar el mouse */
 }
 
@@ -180,7 +182,22 @@ ul {
   }
 }
 
+
 /*============== PRINCIPAL =====================*/
+
+.left {
+  flex: 1;
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+  order: 1; /* Cambia el orden en dispositivos más pequeños */
+}
+
+.right {
+  flex: 2;
+  text-align: justify;
+  margin-left: 40px; /* Espacio entre la imagen y el texto */
+  order: 2; /* Cambia el orden en dispositivos más pequeños */
+}
+
 .content-home {
   display: flex;
   align-items: center;
@@ -190,15 +207,14 @@ ul {
 }
 
 .content-home h1 {
-  font-size: 50px;
+  font-size: 40px;
   font-style: italic;
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .content-home h2 {
   margin: 50px 0;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -212,17 +228,6 @@ ul {
   flex-wrap: wrap; /* Asegura que los elementos se ajusten correctamente */
 }
 
-.left {
-  flex: 1;
-  order: 1; /* Cambia el orden en dispositivos más pequeños */
-}
-
-.right {
-  flex: 2;
-  margin-left: 40px; /* Espacio entre la imagen y el texto */
-  order: 2; /* Cambia el orden en dispositivos más pequeños */
-}
-
 .content-home img {
   margin-top: 10px;
   width: 100%;
@@ -232,6 +237,7 @@ ul {
 }
 
 @media (max-width: 768px) {
+  /* Estilos para pantallas pequeñas */
   .content-home {
     margin: 20px; /* Reduce el margen para pantallas pequeñas */
   }
@@ -267,21 +273,13 @@ ul {
 }
 
 /*===========PRODUCTOS =============*/
-
-.left {
-  margin-right: 20px; /* Espacio entre la imagen y el texto */
-}
-
-.right {
-  text-align: justify;
-}
-
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 150px; /* Ajusta según sea necesario */
   border-radius: 10px;
+  margin-top: 60px;
 }
 
 .productos-imagenes {
@@ -319,9 +317,7 @@ ul {
   display: flex;
   align-items: center; /* Centrar verticalmente */
   justify-content: center; /* Centrar horizontalmente */
-  font-size: calc(
-    10px + 0.3vw
-  ); /* Ajusta el tamaño del texto de manera dinámica */
+  font-size: calc(10px + 0.3vw); /* Ajusta el tamaño del texto de manera dinámica */
 }
 
 .imagen-contenedor img:hover {
@@ -347,19 +343,19 @@ ul {
   .productos-imagenes {
     flex: 0 0 calc(50% - 20px); /* Reducir el ancho de las imágenes para que se muestren dos en una fila */
     margin: 10px; /* Espaciado alrededor de las imágenes */
-    border-radius: 50%;
-    box-sizing: border-box; /* Asegura que el margen esté incluido en el cálculo del ancho */
   }
 
-  .productos-imagenes:nth-child(2n + 1):nth-last-child(1) {
-    flex: 0 10% 80%; /* Ocupa todo el ancho disponible si es la última y está en una fila impar */
+  .productos-imagenes:nth-child(odd) {
     margin-left: 0; /* Elimina margen izquierdo */
     margin-right: 0; /* Elimina margen derecho */
     text-align: center; /* Asegura que la imagen esté centrada */
   }
+
 }
 
+
 /*============ INSTALACION ===============*/
+
 .instalacion {
   text-align: justify;
   margin: 10px;
@@ -423,7 +419,8 @@ ul {
   }
 }
 
-/* ========== MONITOREO ===========*/
+/* ========== MONITOREO =========== */
+
 .monitoreo {
   background: linear-gradient(
       to top,
@@ -477,9 +474,7 @@ ul {
 }
 
 .monitoreo a:hover {
-  color: var(
-    --color_primario
-  ); /* Cambia el color al color primario al pasar el mouse */
+  color: var(--color_primario); /* Cambia el color al color primario al pasar el mouse */
   transform: scale(1.1); /* Aplica un ligero zoom al pasar el mouse */
 }
 
@@ -488,10 +483,9 @@ ul {
   font-size: 3rem;
   margin: 20px 0;
 }
+
 .monitoreo i:hover {
-  color: var(
-    --color_primario
-  ); /* Cambia el color al color primario al pasar el mouse */
+  color: var(--color_primario); /* Cambia el color al color primario al pasar el mouse */
   transform: scale(1.1); /* Aplica un ligero zoom al pasar el mouse */
 }
 
@@ -514,25 +508,30 @@ ul {
   }
 }
 
+
 /*=========== SERVICIOS ============*/
 #servicios {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 #servicios h2 {
   font-size: 50px;
-  margin-top: -60px;
+  margin-top: -60px; /* Ajusta el margen superior para superponer el título */
 }
+
 #servicios a {
   text-decoration: none;
   color: black;
 }
+
 .titulo-servicios {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
 }
+
 .servicio {
   width: calc(25% - 20px);
   margin-bottom: 20px;
@@ -540,34 +539,41 @@ ul {
   box-sizing: border-box;
   text-align: center; /* Centra el contenido horizontalmente */
 }
+
 .servicio img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s, color 0.3s;
 }
+
 .servicio img:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
+
 .servicio h3 {
   font-size: 20px;
   margin-top: 10px;
 }
+
 .servicio p {
   font-size: 16px;
   margin-top: 10px;
 }
+
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   #servicios {
     justify-content: center;
-    margin-top: 90px;
+    margin-top: 90px; /* Ajusta el margen superior para pantallas pequeñas */
   }
+
   .servicio {
     width: calc(50% - 20px); /* Dos tarjetas por fila */
   }
 }
+
 
 /*========== CONTACTO =================*/
 /* Estilo general para el contenedor */
@@ -582,6 +588,7 @@ ul {
   background-position: center; /* Centra la imagen de fondo */
   background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
   color: #fff;
+  display: flex; /* Añadido display: flex */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -605,7 +612,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
+  gap: 50px;
   flex-wrap: wrap; /* Para reorganizar en pantallas pequeñas */
 }
 
@@ -634,8 +641,6 @@ ul {
   border-radius: 5px;
   transition: border-color 0.3s ease;
   box-sizing: border-box;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .contacto-form input[type="text"]:focus,
@@ -706,26 +711,27 @@ ul {
     flex-direction: column;
     align-items: center;
   }
+  
   .contacto-form {
     max-width: 90%;
     margin-bottom: 20px;
   }
+  
   .contacto-img,
   .contacto-whatsapp {
-    display: block;
     text-align: center;
   }
+  
   .contacto-img img {
     margin: 0 auto;
     max-width: 90%;
   }
-  .contacto-whatsapp {
-    margin-top: 10px;
-  }
+  
   .whatsapp-btn {
     width: 100%;
   }
 }
+
 
 /*============= FOOTER ==============*/
 footer {
@@ -748,5 +754,6 @@ footer {
 @media (max-width: 768px) {
   .info-contacto p {
     margin: 0 20px; /* Espacio entre los elementos de texto */
+    font-size: 2vw;
   }
 }
