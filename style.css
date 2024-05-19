@@ -91,7 +91,9 @@ ul {
   font-weight: bold;
 }
 .logo img {
-  height: var(--altura_header); /* Establece la altura igual a la altura del NAVBAR */
+  height: var(
+    --altura_header
+  ); /* Establece la altura igual a la altura del NAVBAR */
   width: auto; /* Permite que el ancho se ajuste automáticamente para mantener la proporción */
 }
 
@@ -178,7 +180,6 @@ ul {
   }
 }
 
-
 /*============== PRINCIPAL =====================*/
 .content-home {
   display: flex;
@@ -234,7 +235,7 @@ ul {
   .content-home {
     margin: 20px; /* Reduce el margen para pantallas pequeñas */
   }
-  
+
   .content-home p {
     margin: 0 10px; /* Ajusta el margen para pantallas pequeñas */
   }
@@ -264,7 +265,6 @@ ul {
     border-radius: 20px;
   }
 }
-
 
 /*===========PRODUCTOS =============*/
 
@@ -319,7 +319,9 @@ ul {
   display: flex;
   align-items: center; /* Centrar verticalmente */
   justify-content: center; /* Centrar horizontalmente */
-  font-size: calc(10px + 0.3vw); /* Ajusta el tamaño del texto de manera dinámica */
+  font-size: calc(
+    10px + 0.3vw
+  ); /* Ajusta el tamaño del texto de manera dinámica */
 }
 
 .imagen-contenedor img:hover {
@@ -341,7 +343,7 @@ ul {
     width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
     border-radius: 10px;
   }
-  
+
   .productos-imagenes {
     flex: 0 0 calc(50% - 20px); /* Reducir el ancho de las imágenes para que se muestren dos en una fila */
     margin: 10px; /* Espaciado alrededor de las imágenes */
@@ -349,7 +351,7 @@ ul {
     box-sizing: border-box; /* Asegura que el margen esté incluido en el cálculo del ancho */
   }
 
-  .productos-imagenes:nth-child(2n+1):nth-last-child(1) {
+  .productos-imagenes:nth-child(2n + 1):nth-last-child(1) {
     flex: 0 10% 80%; /* Ocupa todo el ancho disponible si es la última y está en una fila impar */
     margin-left: 0; /* Elimina margen izquierdo */
     margin-right: 0; /* Elimina margen derecho */
@@ -405,7 +407,7 @@ ul {
     margin: 0; /* Elimina márgenes exteriores para maximizar el uso del espacio */
   }
 
-  .instalacion-item { 
+  .instalacion-item {
     flex: 0 0 100%; /* Hace que cada item ocupe el 100% del contenedor */
     margin-bottom: 20px; /* Espacio entre los items verticalmente */
   }
@@ -421,8 +423,6 @@ ul {
   }
 }
 
-
-
 /* ========== MOONITOREO ===========*/
 .monitoreo {
   background: linear-gradient(
@@ -430,7 +430,7 @@ ul {
       rgba(30, 35, 38, 0.8),
       rgba(30, 35, 38, 1)
     ),
-    url('img/central.jpg');
+    url("img/central.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -468,7 +468,8 @@ ul {
 .monitoreo a {
   font-size: 2.5rem;
   color: var(--color_primario_suave);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), -10px -10px 20px rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+    -10px -10px 20px rgba(255, 255, 255, 0.5);
   margin: 90px 0;
   max-width: 90%; /* Limita el ancho máximo del enlace */
   word-break: break-word; /* Asegura que el texto largo se ajuste */
@@ -476,7 +477,9 @@ ul {
 }
 
 .monitoreo a:hover {
-  color: var(--color_primario); /* Cambia el color al color primario al pasar el mouse */
+  color: var(
+    --color_primario
+  ); /* Cambia el color al color primario al pasar el mouse */
   transform: scale(1.1); /* Aplica un ligero zoom al pasar el mouse */
 }
 
@@ -486,7 +489,9 @@ ul {
   margin: 20px 0;
 }
 .monitoreo i:hover {
-  color: var(--color_primario); /* Cambia el color al color primario al pasar el mouse */
+  color: var(
+    --color_primario
+  ); /* Cambia el color al color primario al pasar el mouse */
   transform: scale(1.1); /* Aplica un ligero zoom al pasar el mouse */
 }
 
@@ -509,9 +514,6 @@ ul {
   }
 }
 
-
-
-
 /*=========== SERVICIOS ============*/
 #servicios {
   display: flex;
@@ -522,7 +524,7 @@ ul {
   font-size: 50px;
   margin-top: -60px;
 }
-#servicios a{
+#servicios a {
   text-decoration: none;
   color: black;
 }
@@ -544,7 +546,7 @@ ul {
   border-radius: 10px;
   transition: transform 0.3s, color 0.3s;
 }
-.servicio img:hover{
+.servicio img:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
@@ -567,8 +569,6 @@ ul {
   }
 }
 
-
-
 /*========== CONTACTO =================*/
 /* Estilo general para el contenedor */
 .contacto {
@@ -577,7 +577,7 @@ ul {
       rgba(106, 200, 254, 0.8),
       rgb(7, 126, 195)
     ),
-    url('img/wallpaper.png');
+    url("img/wallpaper.png");
   background-size: cover; /* Asegura que el fondo cubra todo el contenedor */
   background-position: center; /* Centra la imagen de fondo */
   background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
@@ -703,29 +703,29 @@ ul {
 /* Estilos para pantallas pequeñas */
 @media (max-width: 900px) {
   .contacto-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   .contacto-form {
-      max-width: 90%;
-      margin-bottom: 20px;
+    max-width: 90%;
+    margin-bottom: 20px;
   }
-  .contacto-img, .contacto-whatsapp {
-      display: block;
-      text-align: center;
+  .contacto-img,
+  .contacto-whatsapp {
+    display: block;
+    text-align: center;
   }
   .contacto-img img {
-      margin: 0 auto;
-      max-width: 90%;
+    margin: 0 auto;
+    max-width: 90%;
   }
   .contacto-whatsapp {
-      margin-top: 10px;
+    margin-top: 10px;
   }
   .whatsapp-btn {
-      width: 100%;
+    width: 100%;
   }
 }
-
 
 /*============= FOOTER ==============*/
 footer {
@@ -750,5 +750,3 @@ footer {
     margin: 0 20px; /* Espacio entre los elementos de texto */
   }
 }
-
-
