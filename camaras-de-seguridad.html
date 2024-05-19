@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cámaras de Seguridad en Bogotá</title>
+    <meta
+      name="description"
+      content="Empresa especializada en sistemas de seguridad, alarmas y cámaras de seguridad en Bogotá. Protege tu hogar o negocio con nuestros servicios de seguridad avanzados."
+    />
+    <meta
+      name="keywords"
+      content="cámaras de seguridad, sistemas de seguridad, alarmas, Bogotá"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- MENÚ SUPERIOR -->
+    <header class="header">
+      <nav class="navbar">
+        <h1 class="logo"><img src="img/logo-nuevo-blanco.png" alt="" /></h1>
+
+        <label class="label_hamburguesa" for="menu_hamburguesa">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <input class="menu_hamburguesa" type="checkbox" id="menu_hamburguesa" />
+
+        <ul id="nav" class="ul_links">
+          <li class="li_links">
+            <a href="#hero" class="links" onclick="seleccionar()">Inicio</a>
+          </li>
+          <li class="li_links">
+            <a href="#servicios" class="links" onclick="seleccionar()"
+              >Servicios</a
+            >
+          </li>
+          <li class="li_links">
+            <a href="#contacto" class="links" onclick="seleccionar()"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--  SLIDER   -->
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <a href="pagina1.html">
+            <img src="img/inicial1.jpg" alt="sistema-seguridad-bogota" />
+          </a>
+        </div>
+        <div class="slide">
+          <a href="pagina2.html">
+            <img src="img/integración-seguridad.png" alt="domotica-bogota" />
+          </a>
+        </div>
+        <div class="slide">
+          <a href="pagina3.html">
+            <img
+              src="img/promos/dvr-4-anales-dahua.png"
+              alt="camaras-de-seguridad"
+            />
+          </a>
+        </div>
+        <div class="slide">
+          <a href="pagina3.html">
+            <img
+              src="img/integración-seguridad-comercial.png"
+              alt="camaras-de-seguridad"
+            />
+          </a>
+        </div>
+      </div>
+      <button class="prev-button">&lt;</button>
+      <!-- Flecha para retroceder -->
+      <button class="next-button">&gt;</button>
+      <!-- Flecha para avanzar -->
+    </div>
+
+    <section id="hero" class="content-home">
+      <h1>"Tu hogar evoluciona"</h1>
+      <h2>Protege lo que más importa con nuestras soluciones de seguridad</h2>
+      <div class="container">
+        <div class="left">
+          <img src="img/inge1.png" alt="camaras-de-seguridad" />
+        </div>
+        <div class="right">
+          <p>
+            En <strong>COLTESEG</strong>, entendemos lo importante que es
+            proteger lo que más importa para ti: tu hogar y tu negocio. Es por
+            eso que nos especializamos en ofrecer sistemas de seguridad
+            completos y personalizados, diseñados para brindarte tranquilidad y
+            protección las 24 horas del día, los 7 días de la semana.
+          </p>
+
+          <p>
+            Nuestro equipo de expertos está dedicado a proporcionarte las
+            mejores soluciones en seguridad, incluyendo una amplia gama de
+            cámaras de seguridad y alarmas de última generación. Ya sea que
+            necesites proteger tu hogar, tu negocio o ambos, tenemos la
+            tecnología y el conocimiento necesarios para adaptar nuestros
+            servicios a tus necesidades específicas.
+          </p>
+          <p>
+            ¿Qué nos diferencia? Nuestra dedicación a la excelencia en cada paso
+            del proceso. Desde la consulta inicial hasta la instalación y el
+            mantenimiento continuo, estamos comprometidos a brindarte un
+            servicio excepcional y resultados impecables.
+          </p>
+        </div>
+      </div>
+      <h2>Venta de Cámaras de Seguridad y Alarmas</h2>
+      <p>
+        Ofrecemos una amplia selección de cámaras de seguridad y alarmas de alta
+        calidad, diseñadas para adaptarse a cualquier presupuesto y requisito de
+        seguridad. Ya sea que necesites cámaras de vigilancia para monitorear tu
+        propiedad o sistemas de alarma para proteger tus activos, tenemos la
+        solución perfecta para ti.
+      </p>
+      <div class="products">
+        <div class="productos-imagenes">
+          <div class="imagen-contenedor">
+            <img src="img/productos/product1.png" alt="camaras-de-seguridad" />
+            <div class="informacion-tarjeta">
+              <h3>SISTEMAS DE VIDEO</h3>
+            </div>
+          </div>
+        </div>
+        <div class="productos-imagenes">
+          <div class="imagen-contenedor">
+            <img src="img/productos/imou.png" alt="camaras-wifi" />
+            <div class="informacion-tarjeta">
+              <h3>CÁMARAS INALAMBRICAS</h3>
+            </div>
+          </div>
+        </div>
+        <div class="productos-imagenes">
+          <div class="imagen-contenedor">
+            <img
+              src="img/productos/alarma-en-bogota.png"
+              alt="alarmas-en-bogota"
+            />
+            <div class="informacion-tarjeta">
+              <h3>ALARMAS</h3>
+            </div>
+          </div>
+        </div>
+        <div class="productos-imagenes">
+          <div class="imagen-contenedor">
+            <img
+              src="img/productos/conttrol-de-accesos.png"
+              alt="controles-de-acceso-bogota"
+            />
+            <div class="informacion-tarjeta">
+              <h3>CONTROL DE ACCESO</h3>
+            </div>
+          </div>
+        </div>
+        <div class="productos-imagenes">
+          <div class="imagen-contenedor">
+            <img
+              src="img/productos/automatizacion-de-vivienda.png"
+              alt="domotica-bogota"
+            />
+            <div class="informacion-tarjeta">
+              <h3>AUTOMATIZACIÓN</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="instalacion" class="instalacion">
+        <div class="instalacion-item">
+          <h3>Instalación Profesional</h3>
+          <img src="img/instalacion.jpg" alt="" />
+          <p>
+            Nuestro equipo de instaladores certificados se encargará de instalar
+            tus cámaras de seguridad y alarmas de manera profesional y
+            eficiente. Nos aseguramos de que cada dispositivo se coloque
+            estratégicamente para brindarte la mejor cobertura y protección
+            posible.
+          </p>
+        </div>
+        <div class="instalacion-item">
+          <h3>Mantenimiento y Soporte Continuo</h3>
+          <img src="img/mantenimiento.jpg" alt="" />
+          <p>
+            Una vez que tus sistemas de seguridad estén instalados, nuestro
+            compromiso no termina ahí. Ofrecemos servicios de mantenimiento
+            regular para garantizar que tus cámaras y alarmas funcionen de
+            manera óptima en todo momento. Además, nuestro equipo de soporte
+            está disponible las 24 horas del día, los 7 días de la semana, para
+            ayudarte con cualquier pregunta o problema que puedas tener.
+          </p>
+        </div>
+      </div>
+
+      <div id="monitoreo" class="monitoreo">
+        <h3>Conexión y Monitoreo Remoto</h3>
+        <p>
+          Con nuestras soluciones de seguridad avanzadas, puedes acceder y
+          monitorear tu sistema desde cualquier lugar y en cualquier momento a
+          través de tu teléfono inteligente o computadora. Esto te brinda la
+          tranquilidad de saber que puedes mantener un ojo en tu propiedad,
+          incluso cuando estás fuera.
+        </p>
+        <img src="img/monitreo.jpg" alt="camatas-de-seguridad" />
+        <p style="margin-top: 40px">
+          En <strong>COLTESEG</strong> nos comprometemos a proporcionarte
+          soluciones de seguridad integrales y confiables que se adapten a tus
+          necesidades y te brinden la tranquilidad que te mereces. ¡Contáctanos
+          hoy mismo para obtener más información y proteger lo que más importa
+          para ti!
+        </p>
+        <br />
+        <a href="#contacto" class="cta"
+          ><i class="fa-solid fa-comments"></i> ¡Contáctanos hoy!
+        </a>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <h2 class="titulo-servicios">Nuestros servicios</h2>
+      <div class="servicio">
+        <a href="camaras.html">
+          <img
+            src="img/camaras-de-seguridad-bogota-2.jpg"
+            alt="Cámara de Seguridad"
+          />
+          <h3>Cámaras de Seguridad</h3>
+        </a>
+      </div>
+      <div class="servicio">
+        <a href="alarmas.html">
+          <img src="/img/alarma.png" alt="Alarma" />
+          <h3>Alarmas de Seguridad</h3>
+        </a>
+      </div>
+      <div class="servicio">
+        <a href="automatizacion.html">
+          <img src="img/domotica.png" alt="Alarma" />
+          <h3>Automatización</h3>
+        </a>
+      </div>
+      <div class="servicio">
+        <a href="mantenimiento.html">
+          <img src="img/mantenimiento_de_computadores.png" alt="Alarma" />
+          <h3>Mantenimiento de equipos</h3>
+        </a>
+      </div>
+      <div class="servicio">
+        <a href="cableado.html">
+          <img src="img/cableado-estructurado.png" alt="Alarma" />
+          <h3>Cableado estructurado y Redes</h3>
+        </a>
+      </div>
+      <div class="servicio">
+        <a href="datacenter.html">
+          <img src="img/datacenter.png" alt="Alarma" />
+          <h3>Montaje y mantenimiento de Data Center</h3>
+        </a>
+      </div>
+      <div class="servicio">
+        <a href="integracion.html">
+          <img src="img/seguridad-comercial.png" alt="Alarma" />
+          <h3>Integración Comercial</h3>
+        </a>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <p>
+        ¿Listo para mejorar la seguridad de tu hogar o negocio en Bogotá?
+        ¡Contáctanos hoy mismo!
+      </p>
+      <div class="contacto-container">
+        <form
+        action="https://formsubmit.co/1e193ecf76041226d1558ea81bcf9a43"
+        method="POST"
+        class="contacto-form"
+      >
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+        <label for="phone">Teléfono:</label>
+        <input type="tel" id="phone" name="phone" required />
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+        <input
+          type="hidden"
+          name="_next"
+          value="#"
+        />
+        <input type="hidden" name="_captcha" value="false" />
+      </form>
+      
+
+        <div class="contacto-img">
+          <img src="img/contacto1.png" alt="Contacto" />
+          <div class="contacto-whatsapp">
+            <a href="https://wa.me/573224142500" class="whatsapp-btn"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <!-- 
+            <div class="redes-sociales">
+            <a href="#" target="_blank" rel="noopener noreferrer"
+            ><img src="facebook.png" alt="Facebook"
+            /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+            ><img src="twitter.png" alt="Twitter"
+            /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+            ><img src="instagram.png" alt="Instagram"
+            /></a>
+        </div>
+        -->
+
+      <div class="info-contacto">
+        <div class="columna">
+          <p>
+            <strong><i class="fa-solid fa-phone"></i></strong> (322) 4142500
+          </p>
+        </div>
+        <div class="columna">
+          <p>
+            <strong><i class="fa-solid fa-envelope"></i></strong>
+            colteseg@gmail.com
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
