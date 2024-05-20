@@ -168,7 +168,12 @@ p {
 .form-group {
     margin-bottom: 1rem;
 }
-
+.form-group span {
+    display: block;
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: #333;
+}
 label {
     display: block;
     font-size: 30px;
@@ -200,4 +205,30 @@ select {
 
 .cotiza button:hover {
     background-color: var(--color_primario_suave);
+}
+
+.volver {
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.volver h1 {
+    margin-bottom: 1rem;
+}
+
+.volver a {
+    color: #6495ed;
+    font-size: 2rem;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .cotiza, .volver {
+        width: 90%;
+        margin: 1rem auto;
+    }
 }

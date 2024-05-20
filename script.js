@@ -84,43 +84,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // ======= COTIZADOR ========//
 
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('calcular').addEventListener('click', function() {
-      // Obtener el precio del producto seleccionado
-      var productoSelect = document.getElementById('producto');
-      var precio = parseFloat(productoSelect.options[productoSelect.selectedIndex].getAttribute('data-precio'));
-      
-      // Obtener la cantidad seleccionada
-      var cantidad = parseInt(document.getElementById('cantidad').value);
-      
-      // Calcular el valor total
-      var valorTotal = precio * cantidad;
-      
-      // Formatear el valor total a pesos colombianos
-      var valorTotalCOP = valorTotal.toLocaleString('es-CO', { style: 'currency', currency: 'COP' });
-      
-      // Mostrar el valor total en el campo correspondiente
-      document.getElementById('valor-total').value = valorTotalCOP;
+document.addEventListener('DOMContentLoaded', function () {
+  const calcularBtn = document.getElementById('calcular');
+  const productoSelect = document.getElementById('producto');
+  const cantidadSelect = document.getElementById('cantidad');
+  const valorTotalSpan = document.getElementById('valor-total');
+
+  calcularBtn.addEventListener('click', function () {
+      const precio = parseInt(productoSelect.options[productoSelect.selectedIndex].getAttribute('data-precio'));
+      const cantidad = parseInt(cantidadSelect.value);
+      const valorTotal = precio * cantidad;
+      valorTotalSpan.textContent = valorTotal ? `\$${valorTotal.toLocaleString()}` : '';
   });
-
-  // Asegurarse de que los elementos del slide también estén listos
-  var slides = document.querySelectorAll('.slide');
-  if (slides.length > 0) {
-      var currentSlide = 0;
-
-      function showSlide(index) {
-          slides.forEach(function(slide, i) {
-              slide.style.display = (i === index) ? 'block' : 'none';
-          });
-      }
-
-      function nextSlide() {
-          currentSlide = (currentSlide + 1) % slides.length;
-          showSlide(currentSlide);
-      }
-
-      showSlide(currentSlide);
-      document.getElementById('next-slide').addEventListener('click', nextSlide);
-  }
 });
 
