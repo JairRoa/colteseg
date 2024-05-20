@@ -98,3 +98,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// ======== RESERVAR ========//
+function enviarWhatsApp(element) {
+  const productElement = element.closest('.product');
+  const h2Content = productElement.querySelector('h2').textContent;
+  const message = `Quiero reservar ${encodeURIComponent(h2Content)}`;
+  const phoneNumber = '573224142500'; // Número de teléfono de Colombia
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.location.href = whatsappURL;
+}
