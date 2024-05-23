@@ -232,3 +232,138 @@ select {
         margin: 1rem auto;
     }
 }
+
+
+/*============ INSTALACION ===============*/
+
+.instalacion {
+    text-align: justify;
+    margin: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Ajustes para dispositivos grandes */
+  .instalacion-item {
+    flex: 0 0 calc(50% - 20px); /* Ajuste para que cada item ocupe el 50% del contenedor menos márgenes */
+    box-sizing: border-box;
+    margin-bottom: 40px; /* Espacio entre los items verticalmente */
+  }
+  
+  .instalacion h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 40px;
+  }
+  
+  .instalacion img {
+    display: block;
+    margin: 0 auto 20px; /* Centra la imagen horizontalmente y agrega un margen inferior */
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    object-fit: cover; /* Asegura que la imagen cubra el área circular correctamente */
+    transition: transform 0.3s ease; /* Transición suave para el zoom */
+  }
+  
+  .instalacion img:hover {
+    transform: scale(1.1); /* Ligero zoom al pasar el mouse */
+  }
+  
+  .instalacion p {
+    text-align: justify;
+    font-size: 25px;
+  }
+  
+  .more-info-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .more-info-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para pantallas pequeñas */
+  @media (max-width: 900px) {
+    .instalacion {
+      margin: 20px; /* Elimina márgenes exteriores para maximizar el uso del espacio */
+    }
+  
+    .instalacion-item {
+      flex: 0 0 100%; /* Hace que cada item ocupe el 100% del contenedor */
+      margin-bottom: 20px; /* Espacio entre los items verticalmente */
+    }
+  
+    .instalacion img {
+      margin-bottom: 10px; /* Ajusta el margen inferior para un mejor espaciado en pantallas pequeñas */
+      width: 70%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+      height: auto; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+    }
+  
+    .instalacion p {
+      margin: 0 10px; /* Ajusta el margen para maximizar el uso del espacio de pantalla */
+    }
+  }
+  
+/*========= contactanos ===========*/
+
+.contacto {
+    background-color: #333;
+    width: 100%;
+    padding: 20px 0; /* Añade padding para un poco de espacio vertical */
+    box-sizing: border-box;
+  }
+  
+  .contacto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contacto a {
+    font-size: 2.5rem;
+    color: var(--color_primario);
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+      -10px -10px 20px rgba(255, 255, 255, 0.5);
+    margin: 0; /* Elimina márgenes exteriores */
+    padding: 10px 20px; /* Añade padding para espacio interno */
+    transition: transform 0.3s, color 0.3s; /* Agrega transiciones para suavizar los cambios */
+  }
+  
+  .contacto a:hover {
+    color: var(--color_primario_suave); /* Cambia el color al color primario suave al pasar el mouse */
+    transform: scale(1.1); /* Aplica un ligero zoom al pasar el mouse */
+  }
+  
+  .contacto i {
+    margin-right: 10px; /* Añade un margen a la derecha del icono */
+  }
+  
+  /* Estilos para pantallas pequeñas */
+  @media (max-width: 600px) {
+    .contacto a {
+      font-size: 2rem; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
+      padding: 8px 16px; /* Ajusta el padding para pantallas más pequeñas */
+    }
+  
+    .contacto i {
+      margin-right: 5px; /* Ajusta el margen para el icono en pantallas más pequeñas */
+    }
+  }
+  
+  
+  

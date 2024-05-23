@@ -107,3 +107,14 @@ function enviarWhatsApp(element) {
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
   window.location.href = whatsappURL;
 }
+
+
+// ======== MAS INFO ========//
+function enviarWhatsApp(element) {
+  const productElement = element.closest('.instalacion-item');
+  const h3Content = productElement.querySelector('h3').textContent;
+  const message = `Requiero más información acerca de ${encodeURIComponent(h3Content)}`;
+  const phoneNumber = '573224142500'; // Número de teléfono de Colombia
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.location.href = whatsappURL;
+}
