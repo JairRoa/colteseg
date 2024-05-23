@@ -1,369 +1,373 @@
 :root {
-    --color_primario: #6495ed;
-    --color_primario_suave: #add8e6;
-    --color_blanco: #fff;
-    --altura_header: 80px;
-    --padding_left_rigth: 2rem;
-    --ancho_maximo: 1200px;
-  }
+  --color_primario: #6495ed;
+  --color_primario_suave: #add8e6;
+  --color_blanco: #fff;
+  --altura_header: 80px;
+  --padding_left_rigth: 2rem;
+  --ancho_maximo: 1200px;
+}
 
-
-  body {
-    font-family: "Alata", sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: "Alata", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 body::before {
-    content: "";
-    position: fixed; /* Cambiado a fixed para que ocupe toda la pantalla */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/img/wallpaper.png'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Cambiado a cover para que la imagen cubra toda la pantalla */
-    background-position: center;
-    opacity: 0.5; /* Opacidad del 50% */
-    z-index: -1;
+  content: "";
+  position: fixed; /* Cambiado a fixed para que ocupe toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/wallpaper.png"); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Cambiado a cover para que la imagen cubra toda la pantalla */
+  background-position: center;
+  opacity: 0.5; /* Opacidad del 50% */
+  z-index: -1;
 }
 
 header {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
 }
 
 /*=========== CATALOGO DE PRODUCTOS =========*/
 
 .product-catalog {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 2rem auto;
-    max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
 
 .product {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin: 1rem;
-    padding: 1rem;
-    width: calc(25% - 2rem); /* Ajuste para 4 tarjetas por fila */
-    box-sizing: border-box;
-    text-align: center;
-    transition: box-shadow 0.3s ease-in-out; /* Añadir transición suave para el resplandor */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 1rem;
+  width: calc(25% - 2rem); /* Ajuste para 4 tarjetas por fila */
+  box-sizing: border-box;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out; /* Añadir transición suave para el resplandor */
 }
 
 .product:hover {
-    box-shadow: 0 0 15px #6495ed; /* Añadir resplandor con color #6495ed */
+  box-shadow: 0 0 15px #6495ed; /* Añadir resplandor con color #6495ed */
 }
 
 .product-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 10%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease-in-out; /* Añadir transición suave */
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out; /* Añadir transición suave */
 }
 
 .product-image:hover {
-    transform: scale(3); /* Aumentar tamaño a 3 veces */
+  transform: scale(3); /* Aumentar tamaño a 3 veces */
 }
 
 h2 {
-    font-size: 1.25rem;
-    margin: 0.5rem 0;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
 }
 
 p {
-    font-size: 1rem;
-    color: #555;
+  font-size: 1rem;
+  color: #555;
+}
+
+.product h2,
+.product h3,
+.product p {
+  user-select: none;
 }
 
 .product-catalog button {
-    background-color: var(--color_primario);
-    color: var(--color_blanco);
-    font-size: 20px;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 100%;
-    margin-top: 1rem;
+  background-color: var(--color_primario);
+  color: var(--color_blanco);
+  font-size: 20px;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .product-catalog button:hover {
-    background-color: var(--color_primario_suave);
+  background-color: var(--color_primario_suave);
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .product {
-        width: calc(33.33% - 2rem); /* Ajuste para 3 tarjetas por fila */
-    }
+  .product {
+    width: calc(33.33% - 2rem); /* Ajuste para 3 tarjetas por fila */
+  }
 }
 
 @media (max-width: 900px) {
-    .product {
-        width: calc(50% - 2rem); /* Ajuste para 2 tarjetas por fila */
-    }
+  .product {
+    width: calc(50% - 2rem); /* Ajuste para 2 tarjetas por fila */
+  }
 }
 
 @media (max-width: 600px) {
-    .product {
-        width: calc(100% - 2rem); /* Ajuste para 1 tarjeta por fila */
-    }
+  .product {
+    width: calc(100% - 2rem); /* Ajuste para 1 tarjeta por fila */
+  }
 }
 
-.cotizar{
-    background-color: #333;
-    color: var(--color_blanco);
-    text-align: center;
-    padding: 20px;
+.cotizar {
+  background-color: #333;
+  color: var(--color_blanco);
+  text-align: center;
+  padding: 20px;
 }
-.cotizar h1{
-    font-size: 30px;
-    font-weight: normal;
+.cotizar h1 {
+  font-size: 30px;
+  font-weight: normal;
 }
 .cotizar button {
-    background-color:var(--color_primario);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    font-size: 20px;
-    margin-top: 1rem;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--color_primario);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  font-size: 20px;
+  margin-top: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 .cotizar button:hover {
-    background-color: var(--color_primario_suave);
+  background-color: var(--color_primario_suave);
 }
 
- /*========= COTIZADOR ===========*/
- 
+/*========= COTIZADOR ===========*/
+
 .cotiza {
-    max-width: 600px;
-    margin: 2rem auto;
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 2;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
 }
-.cotiza h2{
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 20px;
+.cotiza h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 .form-group {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .form-group span {
-    display: block;
-    padding: 0.5rem;
-    font-size: 2rem;
-    color: #333;
+  display: block;
+  padding: 0.5rem;
+  font-size: 2rem;
+  color: #333;
 }
 label {
-    display: block;
-    font-size: 30px;
-    margin-bottom: 0.5rem;
+  display: block;
+  font-size: 30px;
+  margin-bottom: 0.5rem;
 }
 
 input[type="number"],
 input[type="text"],
 select {
-    width: 100%;
-    font-size: 20px;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
+  width: 100%;
+  font-size: 20px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .cotiza button {
-    background-color: var(--color_primario);
-    color: white;
-    font-size: 30px;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 100%;
-    margin-top: 1rem;
+  background-color: var(--color_primario);
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .cotiza button:hover {
-    background-color: var(--color_primario_suave);
+  background-color: var(--color_primario_suave);
 }
 
 .volver {
-    position: relative;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1rem;
-    border-radius: 10px;
-    margin: 2rem auto;
-    max-width: 600px;
+  position: relative;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 600px;
 }
 
 .volver h1 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .volver a {
-    color: #6495ed;
-    font-size: 2rem;
-    text-decoration: none;
+  color: #6495ed;
+  font-size: 2rem;
+  text-decoration: none;
 }
 @media (max-width: 768px) {
-    .cotiza, .volver {
-        width: 90%;
-        margin: 1rem auto;
-    }
+  .cotiza,
+  .volver {
+    width: 90%;
+    margin: 1rem auto;
+  }
 }
-
 
 /*============ INSTALACION ===============*/
 
 .instalacion {
-    text-align: justify;
-    margin: 100px;
-    margin-bottom: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  text-align: justify;
+  margin: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Ajustes para dispositivos grandes */
+.instalacion-item {
+  flex: 0 0 calc(50% - 20px); /* Ajuste para que cada item ocupe el 50% del contenedor menos márgenes */
+  box-sizing: border-box;
+  margin-bottom: 40px; /* Espacio entre los items verticalmente */
+}
+
+.instalacion h3 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.instalacion img {
+  display: block;
+  margin: 0 auto 20px; /* Centra la imagen horizontalmente y agrega un margen inferior */
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  object-fit: cover; /* Asegura que la imagen cubra el área circular correctamente */
+  transition: transform 0.3s ease; /* Transición suave para el zoom */
+}
+
+.instalacion img:hover {
+  transform: scale(1.1); /* Ligero zoom al pasar el mouse */
+}
+
+.instalacion p {
+  text-align: justify;
+  font-size: 25px;
+}
+
+.more-info-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.more-info-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 900px) {
+  .instalacion {
+    margin: 20px; /* Elimina márgenes exteriores para maximizar el uso del espacio */
   }
-  
-  /* Ajustes para dispositivos grandes */
+
   .instalacion-item {
-    flex: 0 0 calc(50% - 20px); /* Ajuste para que cada item ocupe el 50% del contenedor menos márgenes */
-    box-sizing: border-box;
-    margin-bottom: 40px; /* Espacio entre los items verticalmente */
+    flex: 0 0 100%; /* Hace que cada item ocupe el 100% del contenedor */
+    margin-bottom: 20px; /* Espacio entre los items verticalmente */
   }
-  
-  .instalacion h3 {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 10px;
-    margin-top: 40px;
-  }
-  
+
   .instalacion img {
-    display: block;
-    margin: 0 auto 20px; /* Centra la imagen horizontalmente y agrega un margen inferior */
-    width: 200px;
-    height: 200px;
-    border-radius: 10%;
-    object-fit: cover; /* Asegura que la imagen cubra el área circular correctamente */
-    transition: transform 0.3s ease; /* Transición suave para el zoom */
+    margin-bottom: 10px; /* Ajusta el margen inferior para un mejor espaciado en pantallas pequeñas */
+    width: 70%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+    height: auto; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
   }
-  
-  .instalacion img:hover {
-    transform: scale(1.1); /* Ligero zoom al pasar el mouse */
-  }
-  
+
   .instalacion p {
-    text-align: justify;
-    font-size: 25px;
+    margin: 0 10px; /* Ajusta el margen para maximizar el uso del espacio de pantalla */
   }
-  
-  .more-info-btn {
-    display: block;
-    margin: 20px auto 0;
-    padding: 10px 20px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .more-info-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Estilos para pantallas pequeñas */
-  @media (max-width: 900px) {
-    .instalacion {
-      margin: 20px; /* Elimina márgenes exteriores para maximizar el uso del espacio */
-    }
-  
-    .instalacion-item {
-      flex: 0 0 100%; /* Hace que cada item ocupe el 100% del contenedor */
-      margin-bottom: 20px; /* Espacio entre los items verticalmente */
-    }
-  
-    .instalacion img {
-      margin-bottom: 10px; /* Ajusta el margen inferior para un mejor espaciado en pantallas pequeñas */
-      width: 70%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
-      height: auto; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
-    }
-  
-    .instalacion p {
-      margin: 0 10px; /* Ajusta el margen para maximizar el uso del espacio de pantalla */
-    }
-  }
-  
+}
+
 /*========= contactanos ===========*/
 
 .contacto {
-    background-color: #333;
-    width: 100%;
-    padding: 20px 0; /* Añade padding para un poco de espacio vertical */
-    box-sizing: border-box;
-  }
-  
-  .contacto-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  background-color: #333;
+  width: 100%;
+  padding: 20px 0; /* Añade padding para un poco de espacio vertical */
+  box-sizing: border-box;
+}
+
+.contacto-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacto a {
+  font-size: 2.5rem;
+  color: var(--color_primario);
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+    -10px -10px 20px rgba(255, 255, 255, 0.5);
+  margin: 0; /* Elimina márgenes exteriores */
+  padding: 10px 20px; /* Añade padding para espacio interno */
+  transition: transform 0.3s, color 0.3s; /* Agrega transiciones para suavizar los cambios */
+}
+
+.contacto a:hover {
+  color: var(
+    --color_primario_suave
+  ); /* Cambia el color al color primario suave al pasar el mouse */
+  transform: scale(1.1); /* Aplica un ligero zoom al pasar el mouse */
+}
+
+.contacto i {
+  margin-right: 10px; /* Añade un margen a la derecha del icono */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
   .contacto a {
-    font-size: 2.5rem;
-    color: var(--color_primario);
-    text-decoration: none;
-    text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
-      -10px -10px 20px rgba(255, 255, 255, 0.5);
-    margin: 0; /* Elimina márgenes exteriores */
-    padding: 10px 20px; /* Añade padding para espacio interno */
-    transition: transform 0.3s, color 0.3s; /* Agrega transiciones para suavizar los cambios */
+    font-size: 2rem; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
+    padding: 8px 16px; /* Ajusta el padding para pantallas más pequeñas */
   }
-  
-  .contacto a:hover {
-    color: var(--color_primario_suave); /* Cambia el color al color primario suave al pasar el mouse */
-    transform: scale(1.1); /* Aplica un ligero zoom al pasar el mouse */
-  }
-  
+
   .contacto i {
-    margin-right: 10px; /* Añade un margen a la derecha del icono */
+    margin-right: 5px; /* Ajusta el margen para el icono en pantallas más pequeñas */
   }
-  
-  /* Estilos para pantallas pequeñas */
-  @media (max-width: 600px) {
-    .contacto a {
-      font-size: 2rem; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
-      padding: 8px 16px; /* Ajusta el padding para pantallas más pequeñas */
-    }
-  
-    .contacto i {
-      margin-right: 5px; /* Ajusta el margen para el icono en pantallas más pequeñas */
-    }
-  }
-  
-  
-  
+}

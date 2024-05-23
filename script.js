@@ -10,7 +10,7 @@ function seleccionar() {
 
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll('a[href^="#"]');
-  const checkbox = document.getElementById('menu_hamburguesa');
+  const checkbox = document.getElementById("menu_hamburguesa");
 
   for (const link of links) {
     link.addEventListener("click", function (event) {
@@ -21,7 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - document.querySelector('.navbar').offsetHeight,
+          top:
+            targetElement.offsetTop -
+            document.querySelector(".navbar").offsetHeight,
           behavior: "smooth",
         });
 
@@ -31,8 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-
 
 // ========== SLIDER =========== //
 document.addEventListener("DOMContentLoaded", function () {
@@ -84,8 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 // ======= COTIZADOR ========//
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -108,24 +106,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 // ======== RESERVAR ========//
 function enviarWhatsApp(element) {
   const productElement = element.closest(".product");
-  const h2Content = productElement.querySelector("h2").textContent;
-  const message = `Quiero reservar ${encodeURIComponent(h2Content)}`;
+  const h3Content = productElement.querySelector("h2").textContent.trim();
+  const message = `Quiero reservar ${encodeURIComponent(h3Content)}`;
   const phoneNumber = "573224142500"; // Número de teléfono de Colombia
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
   window.location.href = whatsappURL;
 }
 
-
-
 // ======== MAS INFO ========//
-function enviarWhatsApp(element) {
+function enviarWhatsAppMasInfo(element) {
   const productElement = element.closest(".instalacion-item");
-  const h3Content = productElement.querySelector("h3").textContent;
+  const h3Content = productElement.querySelector("h3").textContent.trim();
   const message = `Requiero más información acerca de ${encodeURIComponent(
     h3Content
   )}`;
@@ -133,3 +127,16 @@ function enviarWhatsApp(element) {
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
   window.location.href = whatsappURL;
 }
+
+
+function sendWhatsAppMessage(button) {
+  var h3Text = button.closest('.image-text').querySelector('h3').innerText;
+  var message = "Quiero asesoría sobre " + h3Text;
+  var whatsappURL = "https://wa.me/?text=" + encodeURIComponent(message);
+  window.open(whatsappURL, '_blank');
+}
+
+function toggleImageRotation(element) {
+  element.classList.toggle('clicked');
+}
+
