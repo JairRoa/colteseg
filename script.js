@@ -7,7 +7,6 @@ function seleccionar() {
 }
 
 //======== MENÚ ============//
-
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll('a[href^="#"]');
   const checkbox = document.getElementById("menu_hamburguesa");
@@ -71,40 +70,48 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevButton = document.querySelector(".prev-button");
   const nextButton = document.querySelector(".next-button");
 
-  prevButton.addEventListener("click", function () {
-    stopSlider(); // Detiene el slider cuando se hace clic en el botón de retroceso
-    prevSlide();
-    startSlider(); // Reinicia el slider después de retroceder
-  });
+  if (prevButton && nextButton) {
+    prevButton.addEventListener("click", function () {
+      stopSlider(); // Detiene el slider cuando se hace clic en el botón de retroceso
+      prevSlide();
+      startSlider(); // Reinicia el slider después de retroceder
+    });
 
-  nextButton.addEventListener("click", function () {
-    stopSlider(); // Detiene el slider cuando se hace clic en el botón de avance
-    nextSlide();
-    startSlider(); // Reinicia el slider después de avanzar
-  });
+    nextButton.addEventListener("click", function () {
+      stopSlider(); // Detiene el slider cuando se hace clic en el botón de avance
+      nextSlide();
+      startSlider(); // Reinicia el slider después de avanzar
+    });
+  } else {
+    console.error("Botones de navegación no encontrados");
+  }
 });
 
 // ======= COTIZADOR ========//
-
 document.addEventListener("DOMContentLoaded", function () {
   const calcularBtn = document.getElementById("calcular");
   const productoSelect = document.getElementById("producto");
   const cantidadSelect = document.getElementById("cantidad");
   const valorTotalSpan = document.getElementById("valor-total");
 
-  calcularBtn.addEventListener("click", function () {
-    const precio = parseInt(
-      productoSelect.options[productoSelect.selectedIndex].getAttribute(
-        "data-precio"
-      )
-    );
-    const cantidad = parseInt(cantidadSelect.value);
-    const valorTotal = precio * cantidad;
-    valorTotalSpan.textContent = valorTotal
-      ? `\$${valorTotal.toLocaleString()}`
-      : "";
-  });
+  if (calcularBtn && productoSelect && cantidadSelect && valorTotalSpan) {
+    calcularBtn.addEventListener("click", function () {
+      const precio = parseInt(
+        productoSelect.options[productoSelect.selectedIndex].getAttribute(
+          "data-precio"
+        )
+      );
+      const cantidad = parseInt(cantidadSelect.value);
+      const valorTotal = precio * cantidad;
+      valorTotalSpan.textContent = valorTotal
+        ? `$${valorTotal.toLocaleString()}`
+        : "";
+    });
+  } else {
+    console.error("Elementos del cotizador no encontrados");
+  }
 });
+
 
 // ======== RESERVAR ========//
 function enviarWhatsApp(element) {
@@ -128,7 +135,6 @@ function enviarWhatsAppMasInfo(element) {
   window.location.href = whatsappURL;
 }
 
-
 function sendWhatsAppMessage(button) {
   var h3Text = button.closest('.image-text').querySelector('h3').innerText;
   var message = "Quiero asesoría sobre " + h3Text;
@@ -140,3 +146,12 @@ function toggleImageRotation(element) {
   element.classList.toggle('clicked');
 }
 
+//=========== MANTENIMIENTO DE EQUIPOS =============//
+function ServiceWhatsAppMessage(button) {
+  const container = button.closest('.card');
+  const title = container.querySelector('h2').innerText;
+  const phoneNumber = '573224142500';
+  const message = `Requiero servicio de ${encodeURIComponent(title)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+  window.open(whatsappUrl, '_blank');
+}
