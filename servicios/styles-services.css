@@ -360,7 +360,7 @@ text-align: center; /* Asegura que el texto esté centrado */
   margin: 50px;
   text-align: justify;
 }
-.container {
+.camaras-container {
   max-width: 800px;
   margin: 20px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra */
@@ -428,7 +428,7 @@ font-size:25px;
 margin: 50px;
 text-align: justify;
 }
-.container {
+.alarmas-container {
 max-width: 800px;
 margin: 20px auto;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra */
