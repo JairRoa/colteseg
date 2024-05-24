@@ -314,3 +314,139 @@ body {
     margin-right: 5px; /* Ajusta el margen para el icono en pantallas más pequeñas */
   }
 }
+
+/*========= CAMARAS DE SEGURIDAD ===========*/
+
+.camaras-header header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+  }
+  .camaras-header header h1{
+    font-size: 40px;
+  }
+  .camaras-header header p{
+    font-size: 25px;
+  }
+
+.camaras-de-seguridad{
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8)
+  ),
+  url("/img/camaras-de-seguridad-bogota-2.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+width: 100%;
+height: auto;
+color: #000000;
+align-items: center;
+justify-content: center;
+margin: 0;
+padding: 20px; /* Ajuste de padding para proporcionar espacio interior */
+box-sizing: border-box;
+text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.camaras-de-seguridad h2{
+  font-size: 35px;
+  margin: 50px;
+}
+.camaras-de-seguridad p{
+  font-size:25px;
+  margin: 50px;
+  text-align: justify;
+}
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra */
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #ddd;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+/*========= ALARMAS DE SEGURIDAD ===========*/
+
+.alarmas-header header {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+}
+.alarmas-header header h1{
+  font-size: 40px;
+}
+.alarmas-header header p{
+  font-size: 25px;
+}
+
+.alarmas-de-seguridad{
+background: linear-gradient(
+  to top,
+  rgba(255, 255, 255, 0.8),
+  rgba(255, 255, 255, 0.8)
+),
+url("/img/alarma.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+width: 100%;
+height: auto;
+color: #000000;
+align-items: center;
+justify-content: center;
+margin: 0;
+padding: 20px; /* Ajuste de padding para proporcionar espacio interior */
+box-sizing: border-box;
+text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.alarmas-de-seguridad h2{
+font-size: 35px;
+margin: 50px;
+}
+.alarmas-de-seguridad p{
+font-size:25px;
+margin: 50px;
+text-align: justify;
+}
+.container {
+max-width: 800px;
+margin: 20px auto;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra */
+}
+h2 {
+text-align: center;
+margin-bottom: 20px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+border: 2px solid #ddd;
+}
+th, td {
+padding: 12px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+th {
+background-color: #f2f2f2;
+}
