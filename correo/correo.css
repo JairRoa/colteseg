@@ -1,69 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 
 body {
-  background-color: #0c315d;
+  background-color: #ffffff;
   font-family: "Alata", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  position: absolute; /* Establecer posición absoluta */
-  top: -60px; /* Ajustar la posición superior */
-  left: 50%; /* Centrar horizontalmente */
-  transform: translateX(-50%); /* Centrar horizontalmente */
-  color: #e1d941; /* Color amarillo para el texto */
-  font-size: 96px; /* Tamaño del texto */
-  text-align: center; /* Centrar el texto horizontalmente */
-  padding: 10px; /* Añadir relleno */
-  white-space: nowrap; /* Evitar el salto de línea */
-  display: inline-block; /* Mostrar en una sola línea */
-}
-a {
-  position: absolute; /* Establecer posición absoluta */
-  top: 450px; /* Ajustar la posición superior */
-  left: 5%; /* Centrar horizontalmente */
-  text-decoration: none;
-  color: #fff;
-  font-size: 40px;
-}
-a:hover {
-  color: #4169e1;
+.mail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
 .fondo img {
-  height: 800px;
-  margin-top: 140px;
-  margin-left: 400px;
+  max-width: 40%;
+  height: auto;
 }
-/* Estilos para pantallas de 700px o menos */
+
+.mensaje h1 {
+  color: #6495ed;
+  font-size: 48px;
+  margin: 20px 0;
+}
+.mensaje h3 {
+  color: #6495ed;
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.mensaje a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.mensaje a:hover {
+  color: #4169e1;
+}
+
 @media (max-width: 900px) {
-  body {
-    margin-top: 900px; /* Reducir el margen superior para pantallas más pequeñas */
-    background-size: 100%;
-    overflow: hidden;
+  .mensaje h1 {
+    font-size: 6vw;
+  }
+  .mensaje h3 {
+    font-size: 4vw;
+    margin: 0 50px;
   }
 
-  h1 {
-    font-size: 6vw;
-    padding: 5px;
-    top: 10px;
-    left: 50%;
-    white-space: normal;
-    white-space: nowrap; /* Evitar el salto de línea */
-    display: inline-block; /* Mostrar en una sola línea */
-  }
-  a {
-    top: 90vw;
-    left: 35%;
-    text-decoration: none;
-    color: #fff;
+  .mensaje a {
     font-size: 4vw;
   }
-  .fondo {
-    display: flex;
-  }
+
   .fondo img {
-    margin-top: -820px;
-    margin-left: -1vw;
-    height: 80vw;
+    width: 80vw;
+    margin: 20px 0;
   }
 }
