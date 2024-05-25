@@ -92,9 +92,7 @@ ul {
   font-weight: bold;
 }
 .logo img {
-  height: var(
-    --altura_header
-  ); /* Establece la altura igual a la altura del NAVBAR */
+  height: 3.5rem; /* Establece la altura igual a la altura del NAVBAR */
   width: auto; /* Permite que el ancho se ajuste automáticamente para mantener la proporción */
 }
 

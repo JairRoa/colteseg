@@ -42,7 +42,6 @@ body {
 .automatizacion h3 {
   text-align: center;
   font-size: 25px;
-  
 }
 .automatizacion p {
   font-size: 20px;
@@ -168,6 +167,9 @@ body {
     display: block;
     margin: 10px auto;
   }
+  .automatizacion .title h1 {
+    font-size: 2em;
+  }
 }
 
 /*========= ENLACE CATALOGO =========*/
@@ -231,7 +233,7 @@ body {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
-  text-align: center; 
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -403,6 +405,60 @@ td {
 th {
   background-color: #f2f2f2;
 }
+@media (max-width: 728px) {
+  .camaras-de-seguridad h2,
+  .camaras-de-seguridad p {
+    font-size: 20px;
+    margin: 20px;
+  }
+
+  .camaras-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 300px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+  }
+
+  td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+}
 
 /*========= ALARMAS DE SEGURIDAD ===========*/
 
@@ -437,7 +493,7 @@ th {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
-  text-align: center; 
+  text-align: center;
 }
 
 .alarmas-de-seguridad h2 {
@@ -471,4 +527,277 @@ td {
 }
 th {
   background-color: #f2f2f2;
+}
+@media (max-width: 728px) {
+  .alarmas-de-seguridad h2,
+  .alarmas-de-seguridad p {
+    font-size: 20px;
+    margin: 20px;
+  }
+
+  .alarmas-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+  }
+
+  td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+/*========= CABLEADO ===========*/
+
+.cable-header header {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+}
+.cable-header header h1 {
+  font-size: 40px;
+}
+.cable-header header p {
+  font-size: 25px;
+}
+
+.cable-de-seguridad {
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("/img/cableado-estructurado.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  color: #000000;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.cable-de-seguridad h2 {
+  font-size: 35px;
+  margin: 50px;
+}
+.cable-de-seguridad h4 {
+  font-size: 30px;
+  margin: 50px;
+}
+
+.cable-de-seguridad p {
+  font-size: 25px;
+  margin: 50px;
+  text-align: justify;
+}
+@media (max-width: 728px) {
+  .cable-de-seguridad img{
+    width: 80%;
+    border-radius: 10px;
+  }
+  .cable-de-seguridad p {
+    margin: 10px;
+  }
+}
+
+
+
+/*========= DATACENTER ===========*/
+
+.data-header header {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+}
+.data-header header h1 {
+  font-size: 40px;
+}
+.data-header header p {
+  font-size: 25px;
+}
+
+.data-de-seguridad {
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("/img/datacenter.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  color: #000000;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.data-de-seguridad h2 {
+  font-size: 35px;
+  margin: 50px;
+}
+.data-de-seguridad h3 {
+  font-size: 30px;
+  margin: 50px;
+}
+
+.data-de-seguridad p {
+  font-size: 25px;
+  margin: 50px;
+  text-align: justify;
+}
+.data-de-seguridad img{
+  border-radius: 20px;
+}
+@media (max-width: 728px) {
+  .data-de-seguridad img{
+    width: 80%;
+    border-radius: 10px;
+  }
+  .data-de-seguridad p {
+    margin: 10px;
+  }
+}
+
+/*========= INTEGRACIÓN COMERCIAL =========*/
+
+.presentacion{
+  background-color: #333;
+  color: #fff;
+  padding: 20px 50px;
+}
+.presentacion p{
+  font-size: 25px;
+}
+.presentacion p strong{
+  font-size: 30px;
+}
+.titleintegra h1 {
+  background-color: #6495ed;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  font-size: 2.5em;
+}
+.integra {
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("/img/seguridad-comercial.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  color: #000000;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  user-select: none;
+}
+
+.card {
+  width: 400px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.917);
+  cursor: pointer;
+}
+.card img {
+  width: 300px;
+  height: 200px; /* Utiliza la propiedad 'auto' para mantener la proporción */
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.card h2 {
+  color: #333;
+  margin-top: 10px; /* Agrega un pequeño margen superior */
+}
+
+.card p {
+  color: #666;
+  font-size: 1.3em;
+  padding: 20px 20px;
+  text-align: justify;
+}
+
+.integra button {
+  margin-bottom: 100px;
+}
+@media (max-width: 900px) {
+  .titleintegra h1 {
+    background-color: #6495ed;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    font-size: 1.8em;
+  }
+  .integra button {
+    margin-bottom: 120px;
+  }
 }

@@ -83,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
       startSlider(); // Reinicia el slider después de avanzar
     });
   } else {
-    console.error("Botones de navegación no encontrados");
   }
 });
 
@@ -108,10 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
         : "";
     });
   } else {
-    console.error("Elementos del cotizador no encontrados");
   }
 });
-
 
 // ======== RESERVAR ========//
 function enviarWhatsApp(element) {
@@ -136,22 +133,32 @@ function enviarWhatsAppMasInfo(element) {
 }
 
 function sendWhatsAppMessage(button) {
-  var h3Text = button.closest('.image-text').querySelector('h3').innerText;
+  var h3Text = button.closest(".image-text").querySelector("h3").innerText;
   var message = "Quiero asesoría sobre " + h3Text;
   var whatsappURL = "https://wa.me/?text=" + encodeURIComponent(message);
-  window.open(whatsappURL, '_blank');
+  window.open(whatsappURL, "_blank");
 }
 
 function toggleImageRotation(element) {
-  element.classList.toggle('clicked');
+  element.classList.toggle("clicked");
 }
 
 //=========== MANTENIMIENTO DE EQUIPOS =============//
 function ServiceWhatsAppMessage(button) {
-  const container = button.closest('.card');
-  const title = container.querySelector('h2').innerText;
-  const phoneNumber = '573224142500';
+  const container = button.closest(".card");
+  const title = container.querySelector("h2").innerText;
+  const phoneNumber = "573224142500";
   const message = `Requiero servicio de ${encodeURIComponent(title)}`;
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
-  window.open(whatsappUrl, '_blank');
+  window.open(whatsappUrl, "_blank");
+}
+
+//=========== INTEGRACION COMERCIAL =============//
+function IntegraWhatsAppMessage(button) {
+  const container = button.closest(".card");
+  const title = container.querySelector("h2").innerText;
+  const phoneNumber = "573224142500";
+  const message = `Quiero asesoría para ${encodeURIComponent(title)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+  window.open(whatsappUrl, "_blank");
 }
