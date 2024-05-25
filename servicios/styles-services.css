@@ -25,7 +25,7 @@ body {
   text-align: justify;
   position: relative;
   padding: 20px;
-  background: url("/img/casa-inteligente.jpg") no-repeat center center;
+  background: url("/img/domotica.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -42,6 +42,7 @@ body {
 .automatizacion h3 {
   text-align: center;
   font-size: 25px;
+  
 }
 .automatizacion p {
   font-size: 20px;
@@ -59,10 +60,11 @@ body {
 
 .automatizacion .title h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: 56px;
   color: #ffffff;
   font-weight: bold;
   user-select: none; /* Hace que el texto no sea seleccionable */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra con desplazamiento horizontal de 2px, desplazamiento vertical de 2px, desenfoque de 4px y color RGBA (negro con transparencia) */
 }
 
 .automatizacion .image-grid {
