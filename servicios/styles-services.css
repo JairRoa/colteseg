@@ -25,7 +25,7 @@ body {
   text-align: justify;
   position: relative;
   padding: 20px;
-  background: url("/img/domotica.png") no-repeat center center;
+  background: url("/img/domotica.webp") no-repeat center center;
   background-size: cover;
 }
 
@@ -221,7 +221,7 @@ body {
       rgba(255, 255, 255, 0.8),
       rgba(255, 255, 255, 0.8)
     ),
-    url("/img/mantenimiento_de_computadores.png");
+    url("/img/mantenimiento_de_computadores.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -481,7 +481,7 @@ th {
       rgba(255, 255, 255, 0.8),
       rgba(255, 255, 255, 0.8)
     ),
-    url("/img/alarma.png");
+    url("/img/alarma.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -604,7 +604,7 @@ th {
       rgba(255, 255, 255, 0.8),
       rgba(255, 255, 255, 0.8)
     ),
-    url("/img/cableado-estructurado.png");
+    url("/img/cableado-estructurado.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -634,7 +634,7 @@ th {
   text-align: justify;
 }
 @media (max-width: 728px) {
-  .cable-de-seguridad img{
+  .cable-de-seguridad img {
     width: 80%;
     border-radius: 10px;
   }
@@ -642,8 +642,6 @@ th {
     margin: 10px;
   }
 }
-
-
 
 /*========= DATACENTER ===========*/
 
@@ -666,7 +664,7 @@ th {
       rgba(255, 255, 255, 0.8),
       rgba(255, 255, 255, 0.8)
     ),
-    url("/img/datacenter.png");
+    url("/img/datacenter.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -695,11 +693,11 @@ th {
   margin: 50px;
   text-align: justify;
 }
-.data-de-seguridad img{
+.data-de-seguridad img {
   border-radius: 20px;
 }
 @media (max-width: 728px) {
-  .data-de-seguridad img{
+  .data-de-seguridad img {
     width: 80%;
     border-radius: 10px;
   }
@@ -710,15 +708,15 @@ th {
 
 /*========= INTEGRACIÓN COMERCIAL =========*/
 
-.presentacion{
+.presentacion {
   background-color: #333;
   color: #fff;
   padding: 20px 50px;
 }
-.presentacion p{
+.presentacion p {
   font-size: 25px;
 }
-.presentacion p strong{
+.presentacion p strong {
   font-size: 30px;
 }
 .titleintegra h1 {
@@ -734,7 +732,7 @@ th {
       rgba(255, 255, 255, 0.8),
       rgba(255, 255, 255, 0.8)
     ),
-    url("/img/seguridad-comercial.png");
+    url("/img/seguridad-comercial.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
