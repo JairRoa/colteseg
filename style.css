@@ -56,7 +56,6 @@ ul {
   height: calc(100vh - var(--altura_header));
 }
 
-
 .logo {
   color: var(--color_blanco);
 }
@@ -159,7 +158,12 @@ ul {
 .prev-button:hover,
 .next-button:hover {
   color: var(--color_primario);
-  background-color: rgba(0, 0, 0, 0.7); /* Oscurece el fondo al pasar el mouse */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Oscurece el fondo al pasar el mouse */
   transform: translateY(-50%) scale(1.2); /* Aplica un ligero zoom al pasar el mouse */
 }
 
@@ -179,7 +183,6 @@ ul {
     padding: 8px; /* Ajusta el espacio interior */
   }
 }
-
 
 /*============== PRINCIPAL =====================*/
 
@@ -311,11 +314,13 @@ ul {
   text-align: center;
   box-sizing: border-box;
   transition: opacity 0.3s ease; /* Efecto de transición de opacidad */
-  opacity: 0.5; /* Ocultar inicialmente */
+  opacity: 0.8; /* Ocultar inicialmente */
   display: flex;
   align-items: center; /* Centrar verticalmente */
   justify-content: center; /* Centrar horizontalmente */
-  font-size: calc(10px + 0.3vw); /* Ajusta el tamaño del texto de manera dinámica */
+  font-size: calc(
+    10px + 0.3vw
+  ); /* Ajusta el tamaño del texto de manera dinámica */
 }
 
 .imagen-contenedor img:hover {
@@ -348,9 +353,7 @@ ul {
     margin-right: 0; /* Elimina margen derecho */
     text-align: center; /* Asegura que la imagen esté centrada */
   }
-
 }
-
 
 /*============ INSTALACION ===============*/
 
@@ -425,7 +428,7 @@ ul {
       rgba(30, 35, 38, 0.8),
       rgba(30, 35, 38, 1)
     ),
-    url("img/central.jpg");
+    url("img/central.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -472,7 +475,9 @@ ul {
 }
 
 .monitoreo a:hover {
-  color: var(--color_primario); /* Cambia el color al color primario al pasar el mouse */
+  color: var(
+    --color_primario
+  ); /* Cambia el color al color primario al pasar el mouse */
   transform: scale(1.1); /* Aplica un ligero zoom al pasar el mouse */
 }
 
@@ -483,7 +488,9 @@ ul {
 }
 
 .monitoreo i:hover {
-  color: var(--color_primario); /* Cambia el color al color primario al pasar el mouse */
+  color: var(
+    --color_primario
+  ); /* Cambia el color al color primario al pasar el mouse */
   transform: scale(1.1); /* Aplica un ligero zoom al pasar el mouse */
 }
 
@@ -505,7 +512,6 @@ ul {
     font-size: 2.5rem;
   }
 }
-
 
 /*=========== SERVICIOS ============*/
 #servicios {
@@ -572,7 +578,6 @@ ul {
   }
 }
 
-
 /*========== CONTACTO =================*/
 /* Estilo general para el contenedor */
 .contacto {
@@ -581,7 +586,7 @@ ul {
       rgba(106, 200, 254, 0.8),
       rgb(7, 126, 195)
     ),
-    url("img/wallpaper.png");
+    url("img/wallpaper.webp");
   background-size: cover; /* Asegura que el fondo cubra todo el contenedor */
   background-position: center; /* Centra la imagen de fondo */
   background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
@@ -709,27 +714,26 @@ ul {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .contacto-form {
     max-width: 90%;
     margin-bottom: 20px;
   }
-  
+
   .contacto-img,
   .contacto-whatsapp {
     text-align: center;
   }
-  
+
   .contacto-img img {
     margin: 0 auto;
     max-width: 90%;
   }
-  
+
   .whatsapp-btn {
     width: 100%;
   }
 }
-
 
 /*============= FOOTER ==============*/
 footer {
