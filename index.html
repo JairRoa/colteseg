@@ -7,38 +7,70 @@
       name="description"
       content="COLTESEG ofrece sistemas de seguridad completos y personalizados para hogares y negocios en Bogotá. Cámaras de seguridad, alarmas, automatización y más."
     />
+    <meta
+      name="keywords"
+      content="cámaras de seguridad, sistemas de seguridad, alarmas, Bogotá"
+    />
     <title>COLTESEG - Seguridad para Hogares y Negocios en Bogotá</title>
     <link rel="icon" href="img/logo.webp" type="image/x-icon" />
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CFYGX74T1Y"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+    <!-- CSS Crítico en línea -->
+    <style>
+      /* Estilos críticos */
+      body {
+        font-family: "Alata", sans-serif;
+        margin: 0;
+        padding: 0;
       }
-      gtag("js", new Date());
-
-      gtag("config", "G-CFYGX74T1Y");
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-16582255579"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+      .content-home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 100px;
       }
-      gtag("js", new Date());
+      .content-home h1 {
+        font-size: 40px;
+        font-style: italic;
+        text-align: center;
+      }
+      /* Otros estilos críticos... */
+    </style>
 
-      gtag("config", "AW-16582255579");
-    </script>
+    <!-- Preload de fuentes -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+    /></noscript>
+
+    <!-- Preload de CSS -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    /></noscript>
+
+    <!-- Cargar el CSS principal de forma asíncrona -->
+    <link
+      rel="preload"
+      href="/style.purged.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="/style.purged.css" /></noscript>
 
     <!-- Google Tag Manager -->
     <script>
@@ -48,16 +80,24 @@
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
           dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
+        j.defer = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-5ZLWHDVV");
     </script>
     <!-- End Google Tag Manager -->
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script
-      async
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=G-CFYGX74T1Y"
+    ></script>
+    <script
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=AW-16582255579"
+    ></script>
+    <script
+      defer
       src="https://www.googletagmanager.com/gtag/js?id=G-3BEF32N801"
     ></script>
     <script>
@@ -67,27 +107,13 @@
       }
       gtag("js", new Date());
 
+      // Configurar varias IDs en un solo script
+      gtag("config", "G-CFYGX74T1Y");
+      gtag("config", "AW-16582255579");
       gtag("config", "G-3BEF32N801");
     </script>
-
-    <meta
-      name="description"
-      content="Empresa especializada en sistemas de seguridad, alarmas y cámaras de seguridad en Bogotá. Protege tu hogar o negocio con nuestros servicios de seguridad avanzados."
-    />
-    <meta
-      name="keywords"
-      content="cámaras de seguridad, sistemas de seguridad, alarmas, Bogotá"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="icon" type="image/webp" href="img/icon.webp" />
-    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript
@@ -103,7 +129,7 @@
     <!-- MENÚ SUPERIOR -->
     <header class="header">
       <nav class="navbar">
-        <h1 class="logo"><img src="img/logo.webp" alt="" /></h1>
+        <h1 class="logo"><img src="img/logo.webp" loading="lazy" alt="" /></h1>
         <label class="label_hamburguesa" for="menu_hamburguesa">
           <i class="fa-solid fa-bars"></i>
         </label>
@@ -127,18 +153,27 @@
       <div class="slider">
         <div class="slide">
           <a href="pagina1.html">
-            <img src="img/inicial1.webp" alt="sistema-seguridad-bogota" />
+            <img
+              src="img/inicial1.webp"
+              loading="lazy"
+              alt="sistema-seguridad-bogota"
+            />
           </a>
         </div>
         <div class="slide">
           <a href="/servicios/automatizacion.html">
-            <img src="img/integración-seguridad.webp" alt="domotica-bogota" />
+            <img
+              src="img/integración-seguridad.webp"
+              loading="lazy"
+              alt="domotica-bogota"
+            />
           </a>
         </div>
         <div class="slide">
           <a href="/productos/sistemas-de-video.html">
             <img
               src="img/promos/dvr-4-anales-dahua.webp"
+              loading="lazy"
               alt="camaras-de-seguridad"
             />
           </a>
@@ -147,6 +182,7 @@
           <a href="/servicios/integracion-comercial.html">
             <img
               src="img/integración-seguridad-comercial.webp"
+              loading="lazy"
               alt="camaras-de-seguridad"
             />
           </a>
@@ -162,7 +198,7 @@
       <h2>Protege lo que más importa con nuestras soluciones de seguridad</h2>
       <div class="container">
         <div class="left">
-          <img src="img/inge1.webp" alt="Cámaras de seguridad" />
+          <img src="img/inge1.webp" loading="lazy" alt="Cámaras de seguridad" />
         </div>
         <div class="right">
           <p>
@@ -190,11 +226,11 @@
       </div>
       <h2>Venta de Cámaras de Seguridad y Alarmas</h2>
       <p>
-        Ofrecemos una amplia selección de cámaras de seguridad y alarmas de alta
-        calidad, diseñadas para adaptarse a cualquier presupuesto y requisito de
-        seguridad. Ya sea que necesites cámaras de vigilancia para monitorear tu
-        propiedad o sistemas de alarma para proteger tus activos, tenemos la
-        solución perfecta para ti.
+        Ofrecemos una amplia selección de cámaras de seguridad y alarmas de
+        loading="lazy" alta calidad, diseñadas para adaptarse a cualquier
+        presupuesto y requisito de seguridad. Ya sea que necesites cámaras de
+        vigilancia para monitorear tu propiedad o sistemas de alarma para
+        proteger tus activos, tenemos la solución perfecta para ti.
       </p>
 
       <!--   PRODUCTOS     -->
@@ -203,7 +239,10 @@
         <div class="productos-imagenes">
           <div class="imagen-contenedor">
             <a href="/productos/sistemas-de-video.html"
-              ><img src="img/productos/product1.webp" alt="Sistemas de video"
+              ><img
+                src="img/productos/product1.webp"
+                loading="lazy"
+                alt="Sistemas de video"
             /></a>
             <div class="informacion-tarjeta">
               <a
@@ -217,7 +256,11 @@
         <div class="productos-imagenes">
           <div class="imagen-contenedor">
             <a href="/productos/camaras-inalambricas.html">
-              <img src="img/productos/imou.webp" alt="Cámaras wifi" />
+              <img
+                src="img/productos/imou.webp"
+                loading="lazy"
+                alt="Cámaras wifi"
+              />
             </a>
             <div class="informacion-tarjeta">
               <a
@@ -234,6 +277,7 @@
             <a href="/productos/alarmas-en-bogota.html">
               <img
                 src="img/productos/alarma-en-bogota.webp"
+                loading="lazy"
                 alt="Alarmas en Bogotá"
               />
             </a>
@@ -252,6 +296,7 @@
             <a href="/productos/control-de-acceso.html">
               <img
                 src="img/productos/conttrol-de-accesos.webp"
+                loading="lazy"
                 alt="Controles de acceso en Bogotá"
               />
             </a>
@@ -270,6 +315,7 @@
             <a href="/productos/automatizacion-en-bogota.html">
               <img
                 src="img/productos/automatizacion-de-vivienda.webp"
+                loading="lazy"
                 alt="Domótica en Bogotá"
               />
             </a>
@@ -291,6 +337,7 @@
           <h3>Instalación Profesional</h3>
           <img
             src="img/instalacion.webp"
+            loading="lazy"
             alt="Instalación de sistemas de seguridad"
           />
           <p>
@@ -305,6 +352,7 @@
           <h3>Mantenimiento y Soporte Continuo</h3>
           <img
             src="img/mantenimiento.webp"
+            loading="lazy"
             alt="Mantenimiento de sistemas de seguridad"
           />
           <p>
@@ -331,6 +379,7 @@
         </p>
         <img
           src="img/monitreo.webp"
+          loading="lazy"
           alt="Monitoreo remoto de cámaras de seguridad"
         />
         <p style="margin-top: 40px">
@@ -354,6 +403,7 @@
         <a href="/servicios/camaras-de-seguridad.html">
           <img
             src="img/camaras-de-seguridad-bogota-2.webp"
+            loading="lazy"
             alt="Cámara de Seguridad en Bogotá"
           />
           <h3>Cámaras de Seguridad</h3>
@@ -361,13 +411,17 @@
       </div>
       <div class="servicio">
         <a href="/servicios/alarmas-en-bogota.html">
-          <img src="img/alarma.webp" alt="Sistema de Alarma" />
+          <img src="img/alarma.webp" loading="lazy" alt="Sistema de Alarma" />
           <h3>Alarmas de Seguridad</h3>
         </a>
       </div>
       <div class="servicio">
         <a href="/servicios/automatizacion.html">
-          <img src="img/domotica.webp" alt="Sistema de Automatización" />
+          <img
+            src="img/domotica.webp"
+            loading="lazy"
+            alt="Sistema de Automatización"
+          />
           <h3>Automatización</h3>
         </a>
       </div>
@@ -375,6 +429,7 @@
         <a href="/servicios/mantenimiento.html">
           <img
             src="img/mantenimiento_de_computadores.webp"
+            loading="lazy"
             alt="Mantenimiento de Computadoras"
           />
           <h3>Mantenimiento de Equipos</h3>
@@ -384,6 +439,7 @@
         <a href="/servicios/cableado-estructurado-redes.html">
           <img
             src="img/cableado-estructurado.webp"
+            loading="lazy"
             alt="Cableado Estructurado y Redes"
           />
           <h3>Cableado Estructurado y Redes</h3>
@@ -391,13 +447,17 @@
       </div>
       <div class="servicio">
         <a href="/servicios/datacenter.html">
-          <img src="img/datacenter.webp" alt="Data Center" />
+          <img src="img/datacenter.webp" loading="lazy" alt="Data Center" />
           <h3>Montaje y Mantenimiento de Data Center</h3>
         </a>
       </div>
       <div class="servicio">
         <a href="/servicios/integracion-comercial.html">
-          <img src="img/seguridad-comercial.webp" alt="Integración Comercial" />
+          <img
+            src="img/seguridad-comercial.webp"
+            loading="lazy"
+            alt="Integración Comercial"
+          />
           <h3>Integración Comercial</h3>
         </a>
       </div>
@@ -434,7 +494,11 @@
         </form>
 
         <div class="contacto-img">
-          <img src="img/contacto1.webp" alt="Formulario de contacto COLTESEG" />
+          <img
+            src="img/contacto1.webp"
+            loading="lazy"
+            alt="Formulario de contacto COLTESEG"
+          />
           <div class="contacto-whatsapp">
             <a
               href="https://wa.me/573224142500?text=Hola,%20requiero%20asesoría%20especializada"
@@ -451,13 +515,13 @@
       <!--
         <div class="redes-sociales">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <img src="facebook.webp" alt="Síguenos en Facebook" />
+          <img src="facebook.webp" loading="lazy" alt="Síguenos en Facebook" />
         </a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <img src="twitter.webp" alt="Síguenos en Twitter" />
+          <img src="twitter.webp" loading="lazy" alt="Síguenos en Twitter" />
         </a>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-          <img src="instagram.webp" alt="Síguenos en Instagram" />
+          <img src="instagram.webp" loading="lazy" alt="Síguenos en Instagram" />
         </a>
       </div>
       -->
