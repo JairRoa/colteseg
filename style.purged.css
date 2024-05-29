@@ -186,17 +186,21 @@ ul {
 
 /*============== PRINCIPAL =====================*/
 
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Asegura que los elementos se ajusten correctamente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+}
+
 .left,
 .right {
   flex: 1;
-  margin-right: 20px; /* Espacio entre la imagen y el texto */
-  order: 1; /* Cambia el orden en dispositivos más pequeños */
+  margin: 10px; /* Espacio entre los elementos */
 }
 
 .right {
   flex: 2;
-  margin-left: 40px; /* Espacio entre la imagen y el texto */
-  order: 2; /* Cambia el orden en dispositivos más pequeños */
+  order: 2;
 }
 
 .content-home {
@@ -222,11 +226,7 @@ ul {
 .content-home p {
   font-size: 25px;
   text-align: justify;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap; /* Asegura que los elementos se ajusten correctamente */
+  margin: 0 20px;
 }
 
 .content-home img {
@@ -237,36 +237,79 @@ ul {
   border-radius: 20px;
 }
 
+@media (max-width: 1024px) {
+  .content-home {
+    margin: 50px;
+  }
+
+  .content-home h1 {
+    font-size: 35px;
+  }
+
+  .content-home h2 {
+    font-size: 22px;
+    margin: 40px 0;
+  }
+
+  .content-home p {
+    font-size: 22px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    margin: 10px 0; /* Ajusta el margen para pantallas medianas */
+    order: initial;
+  }
+}
+
 @media (max-width: 768px) {
-  /* Estilos para pantallas pequeñas */
   .content-home {
     margin: 20px; /* Reduce el margen para pantallas pequeñas */
   }
 
+  .content-home h1 {
+    font-size: 30px;
+  }
+
+  .content-home h2 {
+    font-size: 20px;
+    margin: 30px 0;
+  }
+
   .content-home p {
+    font-size: 20px;
     margin: 0 10px; /* Ajusta el margen para pantallas pequeñas */
   }
 
   .container {
     flex-direction: column;
-    align-items: center; /* Centra los elementos en pantallas pequeñas */
+    align-items: center;
   }
 
   .left,
   .right {
-    margin-left: 0;
-    order: 2; /* Cambia el orden en dispositivos más pequeños */
+    margin: 10px 0; /* Ajusta el margen para pantallas pequeñas */
+    order: initial;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-home h1 {
+    font-size: 25px;
   }
 
-  .right {
-    order: 1; /* Cambia el orden en dispositivos más pequeños */
+  .content-home h2 {
+    font-size: 18px;
+    margin: 20px 0;
   }
 
-  .content-home img {
-    width: 100%;
-    max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
-    height: auto;
-    border-radius: 20px;
+  .content-home p {
+    font-size: 18px;
   }
 }
 
