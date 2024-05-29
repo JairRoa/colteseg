@@ -798,4 +798,8 @@ th {
   .integra button {
     margin-bottom: 120px;
   }
+  .presentacion {
+    text-align: justify;
+    padding: 10px 20px;
+  }
 }
