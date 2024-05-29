@@ -313,8 +313,6 @@ ul {
   }
 }
 
-
-
 /*=========== PRODUCTOS =============*/
 .products {
   display: flex;
@@ -360,7 +358,9 @@ ul {
   display: flex;
   align-items: center; /* Centrar verticalmente */
   justify-content: center; /* Centrar horizontalmente */
-  font-size: calc(10px + 0.3vw); /* Ajusta el tamaño del texto de manera dinámica */
+  font-size: calc(
+    10px + 0.3vw
+  ); /* Ajusta el tamaño del texto de manera dinámica */
 }
 
 .imagen-contenedor img:hover {
@@ -500,14 +500,15 @@ ul {
   }
 }
 
-
-
-
 /* ========== MONITOREO =========== */
 
 .monitoreo {
-  background: linear-gradient(to top, rgba(30, 35, 38, 0.8), rgba(30, 35, 38, 1)),
-              url("img/central.webp");
+  background: linear-gradient(
+      to top,
+      rgba(30, 35, 38, 0.8),
+      rgba(30, 35, 38, 1)
+    ),
+    url("img/central.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -544,7 +545,8 @@ ul {
 .monitoreo a {
   font-size: 2.5rem;
   color: var(--color_primario_suave);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), -10px -10px 20px rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+    -10px -10px 20px rgba(255, 255, 255, 0.5);
   margin: 30px 0;
   max-width: 90%;
   word-break: break-word;
@@ -581,7 +583,6 @@ ul {
     font-size: 2.5rem;
   }
 }
-
 
 /*=========== SERVICIOS ============*/
 #servicios {
@@ -654,9 +655,6 @@ ul {
     width: calc(100% - 20px); /* Una tarjeta por fila */
   }
 }
-
-
-
 
 /*========== CONTACTO =================*/
 /* Estilo general para el contenedor */
