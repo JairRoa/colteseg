@@ -501,7 +501,6 @@ ul {
 }
 
 /* ========== MONITOREO =========== */
-
 .monitoreo {
   background: linear-gradient(
       to top,
@@ -512,7 +511,7 @@ ul {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 120%;
   min-height: 100vh;
   color: #fff;
   display: flex;
@@ -522,6 +521,9 @@ ul {
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
+  margin: 0; /* Asegura que no haya márgenes por defecto */
+  padding: 0; /* Asegura que no haya relleno por defecto */
+  overflow-x: hidden;
 }
 
 .monitoreo h3 {
