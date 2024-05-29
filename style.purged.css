@@ -313,7 +313,7 @@ ul {
   }
 }
 
-/*===========PRODUCTOS =============*/
+/*=========== PRODUCTOS =============*/
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -373,25 +373,37 @@ ul {
   opacity: 1; /* Mostrar al pasar el mouse */
 }
 
-/* Estilos para pantallas pequeñas */
-@media (max-width: 900px) {
+/* Estilos para pantallas medianas */
+@media (max-width: 1200px) {
   .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Cambiar a center para centrar el contenido */
-    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
-    border-radius: 10px;
+    margin: 0 100px; /* Ajusta el margen */
   }
 
   .productos-imagenes {
-    flex: 0 0 calc(50% - 20px); /* Reducir el ancho de las imágenes para que se muestren dos en una fila */
-    margin: 10px; /* Espaciado alrededor de las imágenes */
+    flex: 0 0 calc(25% - 20px); /* Ajusta el ancho para mostrar cuatro en una fila */
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 900px) {
+  .products {
+    margin: 0 50px; /* Ajusta el margen para pantallas pequeñas */
+    justify-content: center; /* Centrar el contenido */
   }
 
-  .productos-imagenes:nth-child(odd) {
-    margin-left: 0; /* Elimina margen izquierdo */
-    margin-right: 0; /* Elimina margen derecho */
-    text-align: center; /* Asegura que la imagen esté centrada */
+  .productos-imagenes {
+    flex: 0 0 calc(50% - 20px); /* Mostrar dos imágenes por fila */
+  }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 600px) {
+  .products {
+    margin: 0 20px; /* Reduce aún más el margen */
+  }
+
+  .productos-imagenes {
+    flex: 0 0 calc(100% - 20px); /* Mostrar una imagen por fila */
   }
 }
 
@@ -438,6 +450,18 @@ ul {
   text-align: justify;
 }
 
+/* Estilos para pantallas medianas */
+@media (max-width: 1200px) {
+  .instalacion-item {
+    flex: 0 0 calc(50% - 10px); /* Ajusta el ancho para pantallas medianas */
+  }
+
+  .instalacion img {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: 150px;
+  }
+}
+
 /* Estilos para pantallas pequeñas */
 @media (max-width: 900px) {
   .instalacion {
@@ -450,13 +474,29 @@ ul {
   }
 
   .instalacion img {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: 150px;
     margin-bottom: 10px; /* Ajusta el margen inferior para un mejor espaciado en pantallas pequeñas */
-    width: 200px; /* Restaura el ancho de la imagen */
-    height: 200px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
   }
 
   .instalacion p {
     margin: 0 10px; /* Ajusta el margen para maximizar el uso del espacio de pantalla */
+  }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 600px) {
+  .instalacion h3 {
+    font-size: 24px; /* Ajusta el tamaño del texto */
+  }
+
+  .instalacion img {
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    height: 100px;
+  }
+
+  .instalacion p {
+    font-size: 14px; /* Ajusta el tamaño del texto */
   }
 }
 
@@ -472,17 +512,16 @@ ul {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100vw;
-  height: 130vh;
+  width: 100%;
+  min-height: 100vh;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 20px; /* Ajuste de padding para proporcionar espacio interior */
+  padding: 20px;
   box-sizing: border-box;
-  text-align: center; /* Asegura que el texto esté centrado */
+  text-align: center;
 }
 
 .monitoreo h3 {
@@ -493,13 +532,13 @@ ul {
 .monitoreo p {
   text-align: justify;
   margin: 10px 0;
-  max-width: 90%; /* Limita el ancho máximo del párrafo */
+  max-width: 90%;
 }
 
 .monitoreo img {
-  width: 80%;
+  width: 100%;
+  max-width: 800px;
   height: auto;
-  max-width: 800px; /* Asegura que la imagen no exceda un cierto tamaño */
   margin: 20px 0;
 }
 
@@ -508,17 +547,15 @@ ul {
   color: var(--color_primario_suave);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
     -10px -10px 20px rgba(255, 255, 255, 0.5);
-  margin: 90px 0;
-  max-width: 90%; /* Limita el ancho máximo del enlace */
-  word-break: break-word; /* Asegura que el texto largo se ajuste */
-  transition: transform 0.3s, color 0.3s; /* Agrega transiciones para suavizar los cambios */
+  margin: 30px 0;
+  max-width: 90%;
+  word-break: break-word;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .monitoreo a:hover {
-  color: var(
-    --color_primario
-  ); /* Cambia el color al color primario al pasar el mouse */
-  transform: scale(1.1); /* Aplica un ligero zoom al pasar el mouse */
+  color: var(--color_primario);
+  transform: scale(1.1);
 }
 
 .monitoreo i {
@@ -528,24 +565,18 @@ ul {
 }
 
 .monitoreo i:hover {
-  color: var(
-    --color_primario
-  ); /* Cambia el color al color primario al pasar el mouse */
-  transform: scale(1.1); /* Aplica un ligero zoom al pasar el mouse */
+  color: var(--color_primario);
+  transform: scale(1.1);
 }
 
 @media (max-width: 900px) {
-  .monitoreo {
-    height: auto; /* Permite que el contenedor crezca según el contenido */
-    padding: 10px; /* Ajusta el padding para pantallas más pequeñas */
-  }
-
   .monitoreo h3 {
     font-size: 2rem;
   }
 
   .monitoreo a {
     font-size: 2rem;
+    margin: 20px 0;
   }
 
   .monitoreo i {
@@ -561,8 +592,8 @@ ul {
 }
 
 #servicios h2 {
-  font-size: 50px;
-  margin-top: -60px; /* Ajusta el margen superior para superponer el título */
+  font-size: 3.125rem; /* Equivalente a 50px */
+  margin-top: -0.9375rem; /* Ajusta el margen superior para superponer el título */
 }
 
 #servicios a {
@@ -573,12 +604,12 @@ ul {
 .titulo-servicios {
   width: 100%;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* Equivalente a 20px */
 }
 
 .servicio {
   width: calc(25% - 20px);
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* Equivalente a 20px */
   padding: 10px;
   box-sizing: border-box;
   text-align: center; /* Centra el contenido horizontalmente */
@@ -597,20 +628,20 @@ ul {
 }
 
 .servicio h3 {
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 1.25rem; /* Equivalente a 20px */
+  margin-top: 0.625rem; /* Equivalente a 10px */
 }
 
 .servicio p {
-  font-size: 16px;
-  margin-top: 10px;
+  font-size: 1rem; /* Equivalente a 16px */
+  margin-top: 0.625rem; /* Equivalente a 10px */
 }
 
-/* Media query para pantallas pequeñas */
+/* Media query para pantallas medianas */
 @media (max-width: 768px) {
   #servicios {
     justify-content: center;
-    margin-top: 90px; /* Ajusta el margen superior para pantallas pequeñas */
+    margin-top: 5.625rem; /* Equivalente a 90px */
   }
 
   .servicio {
@@ -618,160 +649,89 @@ ul {
   }
 }
 
-/*========== CONTACTO =================*/
-/* Estilo general para el contenedor */
+/* Media query para pantallas pequeñas */
+@media (max-width: 480px) {
+  .servicio {
+    width: calc(100% - 20px); /* Una tarjeta por fila */
+  }
+}
+
+/*=========== CONTACTO ============*/
 .contacto {
-  background: linear-gradient(
-      to top,
-      rgba(106, 200, 254, 0.8),
-      rgb(7, 126, 195)
-    ),
-    url("img/wallpaper.webp");
-  background-size: cover; /* Asegura que el fondo cubra todo el contenedor */
-  background-position: center; /* Centra la imagen de fondo */
-  background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
-  color: #fff;
-  display: flex; /* Añadido display: flex */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 100px; /* Ajuste de padding para proporcionar espacio interior */
-  box-sizing: border-box;
-  text-align: center; /* Asegura que el texto esté centrado */
-  width: 100%;
-  min-height: 70vh; /* Asegura que el contenedor ocupe al menos la altura de la ventana */
+  /* Tu código existente */
 }
 
 .contacto h2 {
-  font-size: 50px;
-  margin-bottom: 20px;
+  font-size: 3.125rem; /* Equivalente a 50px */
+  margin-bottom: 1.25rem; /* Equivalente a 20px */
 }
 
 .contacto p {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* Equivalente a 20px */
 }
 
 .contacto-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 50px;
-  flex-wrap: wrap; /* Para reorganizar en pantallas pequeñas */
+  /* Tu código existente */
 }
 
 .contacto-form {
-  max-width: 45%;
-  flex: 1;
-  min-width: 250px;
-  margin: 0 auto;
-  text-align: center;
+  /* Tu código existente */
 }
 
 .contacto-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 20px;
+  /* Tu código existente */
 }
 
 .contacto-form input[type="text"],
 .contacto-form input[type="email"],
 .contacto-form input[type="tel"],
 .contacto-form textarea {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: border-color 0.3s ease;
-  box-sizing: border-box;
-}
-
-.contacto-form input[type="text"]:focus,
-.contacto-form input[type="email"]:focus,
-.contacto-form input[type="tel"]:focus,
-.contacto-form textarea:focus {
-  border-color: #007bff;
-  outline: none;
+  /* Tu código existente */
 }
 
 .contacto-form textarea {
-  height: 100px;
+  /* Tu código existente */
 }
 
 .contacto-form button[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: block;
-  margin: 20px auto; /* Centra el botón de envío */
-  font-size: 20px;
-}
-
-.contacto-form button[type="submit"]:hover {
-  background-color: #0056b3;
+  /* Tu código existente */
 }
 
 .contacto-img {
-  flex: 1;
-  text-align: center;
+  /* Tu código existente */
 }
 
 .contacto-img img {
   max-width: 100%;
   height: auto;
   max-height: 300px;
+  margin-top: 1.25rem; /* Equivalente a 20px */
 }
 
 .contacto-whatsapp {
-  margin-top: 20px;
-  text-align: center;
+  /* Tu código existente */
 }
 
 .whatsapp-btn {
-  background-color: #25d366;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.whatsapp-btn:hover {
-  background-color: #128c7e;
+  /* Tu código existente */
 }
 
 /* Estilos para pantallas pequeñas */
 @media (max-width: 900px) {
-  .contacto-container {
-    flex-direction: column;
-    align-items: center;
+  .contacto h2 {
+    font-size: 2.5rem; /* Reducir el tamaño de fuente para pantallas pequeñas */
   }
 
-  .contacto-form {
-    max-width: 90%;
-    margin-bottom: 20px;
-  }
-
-  .contacto-img,
-  .contacto-whatsapp {
-    text-align: center;
+  .contacto p {
+    font-size: 1rem; /* Reducir el tamaño de fuente para pantallas pequeñas */
   }
 
   .contacto-img img {
-    margin: 0 auto;
-    max-width: 90%;
+    max-width: 90%; /* Reducir el ancho de la imagen para pantallas pequeñas */
   }
 
   .whatsapp-btn {
-    width: 100%;
+    width: 100%; /* Hacer que el botón de WhatsApp ocupe todo el ancho en pantallas pequeñas */
   }
 }
 
