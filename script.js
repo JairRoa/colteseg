@@ -1,111 +1,164 @@
+// Definir la función seleccionar en el ámbito global
 function seleccionar() {
-  let e = document.getElementById("nav");
-  e.classList.remove("responsive"),
-    (document.getElementById("menu_hamburguesa").checked = !1);
+  let nav = document.getElementById("nav");
+  nav.classList.remove("responsive");
+  document.getElementById("menu_hamburguesa").checked = false; // Desactiva la casilla de verificación
+  MenuVisible = false;
 }
+
+//======== MENÚ ============//
 document.addEventListener("DOMContentLoaded", function () {
-  const e = document.querySelectorAll('a[href^="#"]'),
-    t = document.getElementById("menu_hamburguesa");
-  for (const n of e)
-    n.addEventListener("click", function (e) {
-      e.preventDefault();
-      const t = this.getAttribute("href").substring(1),
-        n = document.getElementById(t);
-      n &&
-        (window.scrollTo({
-          top: n.offsetTop - document.querySelector(".navbar").offsetHeight,
+  const links = document.querySelectorAll('a[href^="#"]');
+  const checkbox = document.getElementById("menu_hamburguesa");
+
+  for (const link of links) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top:
+            targetElement.offsetTop -
+            document.querySelector(".navbar").offsetHeight,
           behavior: "smooth",
-        }),
-        (t.checked = !1));
+        });
+
+        // Desmarca el checkbox para contraer el menú
+        checkbox.checked = false;
+      }
     });
-}),
-  document.addEventListener("DOMContentLoaded", function () {
-    const e = document.querySelector(".slider"),
-      t = document.querySelectorAll(".slide"),
-      n = t.length;
-    let o = 0,
-      i;
-    function l(e) {
-      const t = -e * 100 + "%";
-      slider.style.transform = `translateX(${t})`;
-    }
-    function a() {
-      (o = (o + 1) % n), l(o);
-    }
-    function s() {
-      (o = (o - 1 + n) % n), l(o);
-    }
-    function c() {
-      i = setInterval(a, 5e3);
-    }
-    function d() {
-      clearInterval(i);
-    }
-    c();
-    const r = document.querySelector(".prev-button"),
-      m = document.querySelector(".next-button");
-    r &&
-      m &&
-      (r.addEventListener("click", function () {
-        d(), s(), c();
-      }),
-      m.addEventListener("click", function () {
-        d(), a(), c();
-      }));
-  }),
-  document.addEventListener("DOMContentLoaded", function () {
-    const e = document.getElementById("calcular"),
-      t = document.getElementById("producto"),
-      n = document.getElementById("cantidad"),
-      o = document.getElementById("valor-total");
-    e &&
-      t &&
-      n &&
-      o &&
-      e.addEventListener("click", function () {
-        const e =
-            parseInt(t.options[t.selectedIndex].getAttribute("data-precio")) ||
-            0,
-          n = parseInt(n.value) || 0,
-          o = e * n;
-        o ? (o = `$${o.toLocaleString()}`) : (o = ""), (o.textContent = o);
-      });
-  }),
-  (function e(t) {
-    const n = t.closest(".product"),
-      o = n.querySelector("h2").textContent.trim(),
-      i = `Quiero reservar ${encodeURIComponent(o)}`,
-      l = "573224142500",
-      a = `https://wa.me/${l}?text=${i}`;
-    window.location.href = a;
-  })(this),
-  (function e(t) {
-    const n = t.closest(".instalacion-item"),
-      o = n.querySelector("h3").textContent.trim(),
-      i = `Requiero más información acerca de ${encodeURIComponent(o)}`,
-      l = "573224142500",
-      a = `https://wa.me/${l}?text=${i}`;
-    window.location.href = a;
-  })(this),
-  (function e(t) {
-    var n = t.closest(".image-text").querySelector("h3").innerText,
-      o = "Quiero asesoría sobre " + n,
-      i = "https://wa.me/?text=" + encodeURIComponent(o);
-    window.open(i, "_blank");
-  })(this),
-  (function e(t) {
-    const n = t.closest(".card"),
-      o = n.querySelector("h2").innerText,
-      i = "573224142500",
-      l = `Requiero servicio de ${encodeURIComponent(o)}`,
-      a = `https://api.whatsapp.com/send?phone=${i}&text=${l}`;
-    window.open(a, "_blank");
-  })(this),
-  (function e(t) {
-    const n = t.closest(".card"),
-      o = n.querySelector("h2").innerText,
-      i = "573224142500",
-      l = `Quiero asesoría para ${encodeURIComponent(o)}`,
-      a = `https://api.whatsapp.com/send?phone=${i}&text=${l}`;
-    window.open(a, "_blank");
-  })(this);
+  }
+});
+
+// ========== SLIDER =========== //
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector(".slider");
+  const slides = document.querySelectorAll(".slide");
+  const slideCount = slides.length;
+  let currentIndex = 0;
+  let intervalId; // Variable para almacenar el ID del intervalo
+
+  function showSlide(index) {
+    const offset = -index * 100 + "%"; // Calcula el desplazamiento necesario para mostrar la imagen actual
+    slider.style.transform = `translateX(${offset})`; // Aplica el desplazamiento al slider
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slideCount;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+    showSlide(currentIndex);
+  }
+
+  function startSlider() {
+    intervalId = setInterval(nextSlide, 5000);
+  }
+
+  function stopSlider() {
+    clearInterval(intervalId);
+  }
+
+  startSlider(); // Inicia el slider automáticamente
+
+  // Agrega eventos de clic a botones de avance y retroceso
+  const prevButton = document.querySelector(".prev-button");
+  const nextButton = document.querySelector(".next-button");
+
+  if (prevButton && nextButton) {
+    prevButton.addEventListener("click", function () {
+      stopSlider(); // Detiene el slider cuando se hace clic en el botón de retroceso
+      prevSlide();
+      startSlider(); // Reinicia el slider después de retroceder
+    });
+
+    nextButton.addEventListener("click", function () {
+      stopSlider(); // Detiene el slider cuando se hace clic en el botón de avance
+      nextSlide();
+      startSlider(); // Reinicia el slider después de avanzar
+    });
+  } else {
+  }
+});
+
+// ======= COTIZADOR ========//
+document.addEventListener("DOMContentLoaded", function () {
+  const calcularBtn = document.getElementById("calcular");
+  const productoSelect = document.getElementById("producto");
+  const cantidadSelect = document.getElementById("cantidad");
+  const valorTotalSpan = document.getElementById("valor-total");
+
+  if (calcularBtn && productoSelect && cantidadSelect && valorTotalSpan) {
+    calcularBtn.addEventListener("click", function () {
+      const precio = parseInt(
+        productoSelect.options[productoSelect.selectedIndex].getAttribute(
+          "data-precio"
+        )
+      );
+      const cantidad = parseInt(cantidadSelect.value);
+      const valorTotal = precio * cantidad;
+      valorTotalSpan.textContent = valorTotal
+        ? `$${valorTotal.toLocaleString()}`
+        : "";
+    });
+  } else {
+  }
+});
+
+// ======== RESERVAR ========//
+function enviarWhatsApp(element) {
+  const productElement = element.closest(".product");
+  const h3Content = productElement.querySelector("h2").textContent.trim();
+  const message = `Quiero reservar ${encodeURIComponent(h3Content)}`;
+  const phoneNumber = "573224142500"; // Número de teléfono de Colombia
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.location.href = whatsappURL;
+}
+
+// ======== MAS INFO ========//
+function enviarWhatsAppMasInfo(element) {
+  const productElement = element.closest(".instalacion-item");
+  const h3Content = productElement.querySelector("h3").textContent.trim();
+  const message = `Requiero más información acerca de ${encodeURIComponent(
+    h3Content
+  )}`;
+  const phoneNumber = "573224142500"; // Número de teléfono de Colombia
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.location.href = whatsappURL;
+}
+
+function sendWhatsAppMessage(button) {
+  var h3Text = button.closest(".image-text").querySelector("h3").innerText;
+  var message = "Quiero asesoría sobre " + h3Text;
+  var whatsappURL = "https://wa.me/?text=" + encodeURIComponent(message);
+  window.open(whatsappURL, "_blank");
+}
+
+function toggleImageRotation(element) {
+  element.classList.toggle("clicked");
+}
+
+//=========== MANTENIMIENTO DE EQUIPOS =============//
+function ServiceWhatsAppMessage(button) {
+  const container = button.closest(".card");
+  const title = container.querySelector("h2").innerText;
+  const phoneNumber = "573224142500";
+  const message = `Requiero servicio de ${encodeURIComponent(title)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+  window.open(whatsappUrl, "_blank");
+}
+
+//=========== INTEGRACION COMERCIAL =============//
+function IntegraWhatsAppMessage(button) {
+  const container = button.closest(".card");
+  const title = container.querySelector("h2").innerText;
+  const phoneNumber = "573224142500";
+  const message = `Quiero asesoría para ${encodeURIComponent(title)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+  window.open(whatsappUrl, "_blank");
+}
