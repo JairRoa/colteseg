@@ -162,4 +162,3 @@ function IntegraWhatsAppMessage(button) {
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
   window.open(whatsappUrl, "_blank");
 }
-

@@ -20,7 +20,6 @@ body {
   font-family: "Alata", sans-serif;
 }
 
-/*============ AUTOMATIZACIÓN ============*/
 .automatizacion {
   text-align: justify;
   position: relative;
@@ -39,17 +38,19 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
+
 .automatizacion h3 {
   text-align: center;
   font-size: 25px;
 }
+
 .automatizacion p {
   font-size: 20px;
 }
 
 .automatizacion .container {
   position: relative;
-  z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+  z-index: 1;
   width: 90%;
   margin: 10px auto;
   background-color: rgba(255, 255, 255, 0.2);
@@ -62,8 +63,8 @@ body {
   font-size: 56px;
   color: #ffffff;
   font-weight: bold;
-  user-select: none; /* Hace que el texto no sea seleccionable */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra con desplazamiento horizontal de 2px, desplazamiento vertical de 2px, desenfoque de 4px y color RGBA (negro con transparencia) */
+  user-select: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .automatizacion .image-grid {
@@ -79,7 +80,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  cursor: pointer; /* Cambiamos el cursor a pointer para indicar que es clickeable */
+  cursor: pointer;
 }
 
 .automatizacion .image-item img {
@@ -117,13 +118,13 @@ body {
 }
 
 .more-info-btn {
-  display: block; /* Aseguramos que el botón esté visible en todas las pantallas */
+  display: block;
   font-size: 24px;
   padding: 5px 10px;
   border: none;
   border-radius: 10px;
   max-width: 200px;
-  margin: 10px auto; /* Centramos el botón */
+  margin: 10px auto;
   background-color: #6495ed;
   color: #fff;
   cursor: pointer;
@@ -131,61 +132,25 @@ body {
 }
 
 .more-info-btn:hover {
-  background-color: #add8e6; /* Cambio de color de fondo en hover */
+  background-color: #add8e6;
 }
 
-/* Media queries para ajustar el diseño en dispositivos móviles */
-@media (max-width: 900px) {
-  .automatizacion .image-grid {
-    grid-template-columns: 1fr;
-  }
-  .automatizacion h2 {
-    display: none;
-  }
-  .automatizacion .image-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .automatizacion .image-item img {
-    width: 100%;
-  }
-
-  .automatizacion .image-text {
-    position: static;
-    opacity: 1;
-    background-color: var(--color_primario_suave);
-    color: black;
-    padding: 10px;
-    margin-top: 10px;
-    width: 100%;
-  }
-
-  .more-info-btn {
-    display: block;
-    margin: 10px auto;
-  }
-  .automatizacion .title h1 {
-    font-size: 2em;
-  }
-}
-
-/*========= ENLACE CATALOGO =========*/
 .catalog {
   background-color: var(--color_primario);
   text-align: center;
   margin: 0;
   padding: 20px;
 }
+
 .catalog h2 {
   font-size: 30px;
   color: #fff;
 }
+
 .catalog a {
   text-decoration: none;
 }
+
 .catalog button {
   font-family: "Alata", sans-serif;
   display: block;
@@ -195,19 +160,19 @@ body {
   border: none;
   border-radius: 10px;
   max-width: 200px;
-  margin: 10px auto; /* Centramos el botón */
+  margin: 10px auto;
   background-color: #ffffff;
   color: #000000;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
+
 .catalog button:hover {
   background-color: #e0e0e0;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.917);
 }
 
-/*========= MANTENIMIENTO DE EQUIPOS =========*/
 .titlemantenimiento h1 {
   background-color: #6495ed;
   color: #fff;
@@ -215,6 +180,7 @@ body {
   padding: 50px;
   font-size: 2.5em;
 }
+
 .mantenimiento {
   background: linear-gradient(
       to top,
@@ -249,21 +215,23 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
+
 .card:hover {
   background-color: #e0e0e0;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.917);
   cursor: pointer;
 }
+
 .card img {
   width: 200px;
-  height: 200px; /* Utiliza la propiedad 'auto' para mantener la proporción */
+  height: 200px;
   border-radius: 50%;
   margin-top: 20px;
 }
 
 .card h2 {
   color: #333;
-  margin-top: 10px; /* Agrega un pequeño margen superior */
+  margin-top: 10px;
 }
 
 .card p {
@@ -273,28 +241,10 @@ body {
   text-align: justify;
 }
 
-.mantenimiento button {
-  margin-bottom: 100px;
-}
-@media (max-width: 900px) {
-  .titlemantenimiento h1 {
-    background-color: #6495ed;
-    color: #fff;
-    text-align: center;
-    padding: 50px;
-    font-size: 1.8em;
-  }
-  .mantenimiento button {
-    margin-bottom: 120px;
-  }
-}
-
-/*========= contactanos ===========*/
-
 .contacto {
   background-color: #333;
   width: 100%;
-  padding: 20px 0; /* Añade padding para un poco de espacio vertical */
+  padding: 20px 0;
   box-sizing: border-box;
 }
 
