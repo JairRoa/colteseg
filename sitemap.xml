@@ -1,83 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://colteseg.netlify.app/</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/#hero</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/#servicios</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/#contacto</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/productos/camaras-de-seguridad.html</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/productos/camaras-inalambricas.html</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/productos/alarmas-en-bogota.html</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/productos/control-de-acceso.html</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/productos/automatizacion-en-bogota.html</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/servicios/camaras-de-seguridad.html</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/servicios/alarmas-en-bogota.html</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/servicios/automatizacion.html</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/servicios/mantenimiento.html</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/servicios/cableado-estructurado-redes.html</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/servicios/datacenter.html</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/servicios/integracion-comercial.html</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.6</priority>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://colteseg.netlify.app/</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/servicios/automatizacion</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/productos/camaras-de-seguridad</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/servicios/integracion-comercial</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/productos/camaras-inalambricas</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/productos/alarmas-en-bogota</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/productos/control-de-acceso</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/productos/automatizacion-en-bogota</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/servicios/camaras-de-seguridad</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/servicios/alarmas-en-bogota</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/servicios/mantenimiento</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/servicios/cableado-estructurado-redes</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/servicios/datacenter</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://colteseg.netlify.app/productos/cotizador</loc>
+  <lastmod>2024-06-02T16:56:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
