@@ -1,15 +1,23 @@
-/* Se recomienda cargar la fuente desde el HTML con:
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&display=swap">
+/* ===================================
+   VARIABLES Y RESETEO
+=================================== */
+
+/* 
+   Si cargas la fuente vía HTML con <link> desde fonts.googleapis.com,
+   asegúrate de usar "display=swap" para evitar texto invisible 
+   y así reducir CLS:
+   <link
+     rel="stylesheet"
+     href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+   />
 */
 
-/* Variables globales */
 :root {
   --color_primario: #6495ed;
   --color_primario_suave: #add8e6;
   --color_blanco: #fff;
   --altura_header: 80px;
-  --padding_left_right: 2rem; /* Se corrigió el nombre */
+  --padding_left_right: 2rem;
   --ancho_maximo: 1200px;
 }
 
@@ -24,14 +32,22 @@ body {
   font-family: "Alata", sans-serif;
 }
 
-/*========= NAVBAR ==============*/
+/* ===================================
+   ENLACES, LISTAS Y TIPOGRAFÍA
+=================================== */
+
 a {
   text-decoration: none;
+  color: inherit; /* Mantén el color por defecto del contenedor */
 }
 
 ul {
   list-style: none;
 }
+
+/* ===================================
+   CABECERA (NAVBAR)
+=================================== */
 
 .header {
   height: var(--altura_header);
@@ -52,16 +68,13 @@ ul {
   padding: 0 var(--padding_left_right);
 }
 
-.menu_hamburguesa {
-  display: none;
-}
-
-.menu_hamburguesa:checked + .ul_links {
-  height: calc(100vh - var(--altura_header));
-}
-
 .logo {
   color: var(--color_blanco);
+}
+
+.logo img {
+  height: 3.5rem; /* Ajustado para que encaje en el header */
+  width: auto;
 }
 
 .fa-solid {
@@ -70,20 +83,41 @@ ul {
   cursor: pointer;
 }
 
+/* 
+   Menú hamburguesa:
+   - Se usa checkbox para abrir/cerrar el menú.
+   - Con position: fixed; evitamos que el contenido
+     de la página "salte" al abrir el menú en mobile.
+*/
+
+.menu_hamburguesa {
+  display: none;
+}
+
+.label_hamburguesa {
+  display: block;
+  cursor: pointer;
+}
+
 .ul_links {
-  width: 100%;
-  background-color: var(--color_primario_suave);
-  position: absolute;
+  position: fixed; /* Fijo para evitar desplazar el contenido */
   top: var(--altura_header);
   left: 0;
+  right: 0;
   height: 0;
   overflow: hidden;
+  background-color: var(--color_primario_suave);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  transition: all 0.3s;
+  transition: height 0.3s;
+  z-index: 998;
+}
+
+.menu_hamburguesa:checked + .ul_links {
+  height: calc(100vh - var(--altura_header));
 }
 
 .links {
@@ -92,16 +126,15 @@ ul {
   font-weight: bold;
 }
 
-.logo img {
-  height: 3.5rem; /* Igual a la altura del NAVBAR */
-  width: auto;
-}
+/* ================================
+   NAVBAR - VISTA ESCRITORIO
+================================ */
 
-/*========== RESPONSIVE NAVBAR =================*/
 @media (min-width: 768px) {
   .label_hamburguesa {
     display: none;
   }
+
   .ul_links {
     position: static;
     width: auto;
@@ -110,21 +143,26 @@ ul {
     flex-direction: row;
     gap: 2rem;
   }
+
   .links {
     font-size: 1.5rem;
     transition: all 0.3s;
   }
+
   .links:hover {
     color: var(--color_primario_suave);
     padding: 0.2rem 0.7rem;
   }
 }
 
-/*=========== SLIDER ==============*/
+/* ===================================
+   SLIDER
+=================================== */
+
 .slider-container {
   overflow: hidden;
   width: 100%;
-  margin-top: var(--altura_header);
+  margin-top: var(--altura_header); /* Para compensar el header fijo */
   position: relative;
 }
 
@@ -180,7 +218,10 @@ ul {
   }
 }
 
-/*============== PRINCIPAL =====================*/
+/* ===================================
+   SECCIÓN PRINCIPAL (content-home)
+=================================== */
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -203,7 +244,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 100px;
+  margin: 100px; /* Ajustar según necesites en pantallas grandes */
 }
 
 .content-home h1 {
@@ -232,30 +273,67 @@ ul {
   border-radius: 20px;
 }
 
-/* Ajustes responsivos para .content-home */
+/* Responsividad de content-home */
+
 @media (max-width: 1024px) {
   .content-home {
     margin: 50px;
   }
-  .content-home h1 { font-size: 35px; }
-  .content-home h2 { font-size: 22px; margin: 40px 0; }
-  .content-home p { font-size: 22px; }
-  .container { flex-direction: column; align-items: center; }
-  .left, .right { margin: 10px 0; order: initial; }
-}
-@media (max-width: 768px) {
-  .content-home { margin: 20px; }
-  .content-home h1 { font-size: 30px; }
-  .content-home h2 { font-size: 20px; margin: 30px 0; }
-  .content-home p { font-size: 20px; margin: 0 10px; }
-}
-@media (max-width: 480px) {
-  .content-home h1 { font-size: 25px; }
-  .content-home h2 { font-size: 18px; margin: 20px 0; }
-  .content-home p { font-size: 18px; }
+  .content-home h1 {
+    font-size: 35px;
+  }
+  .content-home h2 {
+    font-size: 22px;
+    margin: 40px 0;
+  }
+  .content-home p {
+    font-size: 22px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left,
+  .right {
+    margin: 10px 0;
+    order: initial;
+  }
 }
 
-/*=========== PRODUCTOS =============*/
+@media (max-width: 768px) {
+  .content-home {
+    margin: 20px;
+  }
+  .content-home h1 {
+    font-size: 30px;
+  }
+  .content-home h2 {
+    font-size: 20px;
+    margin: 30px 0;
+  }
+  .content-home p {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-home h1 {
+    font-size: 25px;
+  }
+  .content-home h2 {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  .content-home p {
+    font-size: 18px;
+  }
+}
+
+/* ===================================
+   PRODUCTOS
+=================================== */
+
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -313,20 +391,39 @@ ul {
 }
 
 /* Responsividad de Productos */
+
 @media (max-width: 1200px) {
-  .products { margin: 0 100px; }
-  .productos-imagenes { flex: 0 0 calc(25% - 20px); }
-}
-@media (max-width: 900px) {
-  .products { margin: 0 50px; justify-content: center; }
-  .productos-imagenes { flex: 0 0 calc(50% - 20px); }
-}
-@media (max-width: 600px) {
-  .products { margin: 0 20px; }
-  .productos-imagenes { flex: 0 0 calc(100% - 20px); }
+  .products {
+    margin: 0 100px;
+  }
+  .productos-imagenes {
+    flex: 0 0 calc(25% - 20px);
+  }
 }
 
-/*============ INSTALACION ===============*/
+@media (max-width: 900px) {
+  .products {
+    margin: 0 50px;
+    justify-content: center;
+  }
+  .productos-imagenes {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .products {
+    margin: 0 20px;
+  }
+  .productos-imagenes {
+    flex: 0 0 calc(100% - 20px);
+  }
+}
+
+/* ===================================
+   INSTALACION Y MANTENIMIENTO
+=================================== */
+
 .instalacion {
   text-align: justify;
   margin: 10px 0 100px;
@@ -366,22 +463,50 @@ ul {
 }
 
 @media (max-width: 1200px) {
-  .instalacion-item { flex: 0 0 calc(50% - 10px); }
-  .instalacion img { width: 150px; height: 150px; }
-}
-@media (max-width: 900px) {
-  .instalacion { margin: 0; }
-  .instalacion-item { flex: 0 0 100%; margin-bottom: 20px; }
-  .instalacion img { width: 150px; height: 150px; margin-bottom: 10px; }
-  .instalacion p { margin: 0 10px; }
-}
-@media (max-width: 600px) {
-  .instalacion h3 { font-size: 24px; }
-  .instalacion img { width: 100px; height: 100px; }
-  .instalacion p { font-size: 14px; }
+  .instalacion-item {
+    flex: 0 0 calc(50% - 10px);
+  }
+  .instalacion img {
+    width: 150px;
+    height: 150px;
+  }
 }
 
-/* ========== MONITOREO ===========*/
+@media (max-width: 900px) {
+  .instalacion {
+    margin: 0;
+  }
+  .instalacion-item {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+  .instalacion img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+  .instalacion p {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .instalacion h3 {
+    font-size: 24px;
+  }
+  .instalacion img {
+    width: 100px;
+    height: 100px;
+  }
+  .instalacion p {
+    font-size: 14px;
+  }
+}
+
+/* ===================================
+   MONITOREO
+=================================== */
+
 .monitoreo {
   background: linear-gradient(
       to top,
@@ -392,7 +517,7 @@ ul {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%; /* Se ajusta a 100% para evitar overflow innecesario */
+  width: 100%;
   min-height: 100vh;
   color: #fff;
   display: flex;
@@ -428,7 +553,7 @@ ul {
   font-size: 2.5rem;
   color: var(--color_primario_suave);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
-               -10px -10px 20px rgba(255, 255, 255, 0.5);
+    -10px -10px 20px rgba(255, 255, 255, 0.5);
   margin: 30px 0;
   max-width: 90%;
   word-break: break-word;
@@ -452,12 +577,22 @@ ul {
 }
 
 @media (max-width: 900px) {
-  .monitoreo h3 { font-size: 2rem; }
-  .monitoreo a { font-size: 2rem; margin: 20px 0; }
-  .monitoreo i { font-size: 2.5rem; }
+  .monitoreo h3 {
+    font-size: 2rem;
+  }
+  .monitoreo a {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  .monitoreo i {
+    font-size: 2.5rem;
+  }
 }
 
-/*=========== SERVICIOS ============*/
+/* ===================================
+   SERVICIOS
+=================================== */
+
 #servicios {
   display: flex;
   flex-wrap: wrap;
@@ -467,11 +602,6 @@ ul {
 #servicios h2 {
   font-size: 3.125rem;
   margin-top: -0.9375rem;
-}
-
-#servicios a {
-  text-decoration: none;
-  color: black;
 }
 
 .titulo-servicios {
@@ -511,15 +641,25 @@ ul {
 }
 
 @media (max-width: 768px) {
-  #servicios { justify-content: center; margin-top: 5.625rem; }
-  .servicio { width: calc(50% - 20px); }
+  #servicios {
+    justify-content: center;
+    margin-top: 5.625rem;
+  }
+  .servicio {
+    width: calc(50% - 20px);
+  }
 }
 
 @media (max-width: 480px) {
-  .servicio { width: calc(100% - 20px); }
+  .servicio {
+    width: calc(100% - 20px);
+  }
 }
 
-/*========== CONTACTO =================*/
+/* ===================================
+   CONTACTO
+=================================== */
+
 .contacto {
   background: linear-gradient(
       to top,
@@ -594,7 +734,9 @@ ul {
   outline: none;
 }
 
-.contacto-form textarea { height: 100px; }
+.contacto-form textarea {
+  height: 100px;
+}
 
 .contacto-form button[type="submit"] {
   background-color: #007bff;
@@ -613,7 +755,10 @@ ul {
   background-color: #0056b3;
 }
 
-.contacto-img { flex: 1; text-align: center; }
+.contacto-img {
+  flex: 1;
+  text-align: center;
+}
 
 .contacto-img img {
   max-width: 100%;
@@ -639,20 +784,36 @@ ul {
   font-size: 20px;
 }
 
-.whatsapp-btn:hover { background-color: #128c7e; }
+.whatsapp-btn:hover {
+  background-color: #128c7e;
+}
 
 @media (max-width: 900px) {
   .contacto-container {
     flex-direction: column;
     align-items: center;
   }
-  .contacto-form { max-width: 90%; margin-bottom: 20px; }
-  .contacto-img, .contacto-whatsapp { text-align: center; }
-  .contacto-img img { margin: 0 auto; max-width: 90%; }
-  .whatsapp-btn { width: 100%; }
+  .contacto-form {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+  .contacto-img,
+  .contacto-whatsapp {
+    text-align: center;
+  }
+  .contacto-img img {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  .whatsapp-btn {
+    width: 100%;
+  }
 }
 
-/*============= FOOTER ==============*/
+/* ===================================
+   FOOTER
+=================================== */
+
 footer {
   background-color: #333;
   color: #fff;
@@ -661,9 +822,13 @@ footer {
   justify-content: center;
 }
 
-.info-contacto { display: flex; }
+.info-contacto {
+  display: flex;
+}
 
-.info-contacto p { margin: 0 80px; }
+.info-contacto p {
+  margin: 0 80px;
+}
 
 @media (max-width: 768px) {
   .info-contacto p {
