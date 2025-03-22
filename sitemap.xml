@@ -4,21 +4,7 @@
     <loc>https://colteseg.netlify.app/</loc>
     <lastmod>2024-06-01</lastmod>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/#hero</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/#servicios</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://colteseg.netlify.app/#contacto</loc>
-    <lastmod>2024-06-01</lastmod>
-    <priority>0.8</priority>
+    <!-- <changefreq>daily</changefreq> -->
   </url>
   <url>
     <loc>https://colteseg.netlify.app/productos/camaras-de-seguridad.html</loc>

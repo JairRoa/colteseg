@@ -1,36 +1,43 @@
 // Definir la función seleccionar en el ámbito global
 function seleccionar() {
-  let nav = document.getElementById("nav");
-  nav.classList.remove("responsive");
-  document.getElementById("menu_hamburguesa").checked = false; // Desactiva la casilla de verificación
-  MenuVisible = false;
+  const nav = document.getElementById("nav");
+  if (nav) {
+    nav.classList.remove("responsive");
+  }
+  const menuCheckbox = document.getElementById("menu_hamburguesa");
+  if (menuCheckbox) {
+    menuCheckbox.checked = false; // Desactiva la casilla de verificación
+  }
+  // Si se usa una variable global para el estado del menú, asegúrate de declararla.
+  // Por ejemplo: window.MenuVisible = false;
+  window.MenuVisible = false;
 }
 
 //======== MENÚ ============//
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll('a[href^="#"]');
   const checkbox = document.getElementById("menu_hamburguesa");
+  const navbar = document.querySelector(".navbar");
 
-  for (const link of links) {
+  links.forEach(function (link) {
     link.addEventListener("click", function (event) {
       event.preventDefault();
 
       const targetId = this.getAttribute("href").substring(1);
       const targetElement = document.getElementById(targetId);
 
-      if (targetElement) {
+      if (targetElement && navbar) {
         window.scrollTo({
-          top:
-            targetElement.offsetTop -
-            document.querySelector(".navbar").offsetHeight,
+          top: targetElement.offsetTop - navbar.offsetHeight,
           behavior: "smooth",
         });
-
         // Desmarca el checkbox para contraer el menú
-        checkbox.checked = false;
+        if (checkbox) {
+          checkbox.checked = false;
+        }
       }
     });
-  }
+  });
 });
 
 // ========== SLIDER =========== //
@@ -39,11 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll(".slide");
   const slideCount = slides.length;
   let currentIndex = 0;
-  let intervalId; // Variable para almacenar el ID del intervalo
+  let intervalId; // Almacena el ID del intervalo
 
   function showSlide(index) {
-    const offset = -index * 100 + "%"; // Calcula el desplazamiento necesario para mostrar la imagen actual
-    slider.style.transform = `translateX(${offset})`; // Aplica el desplazamiento al slider
+    const offset = -index * 100 + "%"; // Desplazamiento para mostrar la imagen actual
+    if (slider) {
+      slider.style.transform = `translateX(${offset})`;
+    }
   }
 
   function nextSlide() {
@@ -66,23 +75,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   startSlider(); // Inicia el slider automáticamente
 
-  // Agrega eventos de clic a botones de avance y retroceso
+  // Eventos de clic para botones de avance y retroceso
   const prevButton = document.querySelector(".prev-button");
   const nextButton = document.querySelector(".next-button");
 
   if (prevButton && nextButton) {
     prevButton.addEventListener("click", function () {
-      stopSlider(); // Detiene el slider cuando se hace clic en el botón de retroceso
+      stopSlider();
       prevSlide();
-      startSlider(); // Reinicia el slider después de retroceder
+      startSlider();
     });
 
     nextButton.addEventListener("click", function () {
-      stopSlider(); // Detiene el slider cuando se hace clic en el botón de avance
+      stopSlider();
       nextSlide();
-      startSlider(); // Reinicia el slider después de avanzar
+      startSlider();
     });
-  } else {
   }
 });
 
@@ -95,48 +103,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (calcularBtn && productoSelect && cantidadSelect && valorTotalSpan) {
     calcularBtn.addEventListener("click", function () {
+      // Obtiene el precio almacenado en el atributo data-precio
       const precio = parseInt(
-        productoSelect.options[productoSelect.selectedIndex].getAttribute(
-          "data-precio"
-        )
+        productoSelect.options[productoSelect.selectedIndex].getAttribute("data-precio")
       );
       const cantidad = parseInt(cantidadSelect.value);
-      const valorTotal = precio * cantidad;
-      valorTotalSpan.textContent = valorTotal
-        ? `$${valorTotal.toLocaleString()}`
-        : "";
+      // Verifica que precio y cantidad sean números válidos
+      if (!isNaN(precio) && !isNaN(cantidad)) {
+        const valorTotal = precio * cantidad;
+        valorTotalSpan.textContent = `$${valorTotal.toLocaleString()}`;
+      } else {
+        valorTotalSpan.textContent = "";
+      }
     });
-  } else {
   }
 });
 
 // ======== RESERVAR ========//
 function enviarWhatsApp(element) {
   const productElement = element.closest(".product");
-  const h3Content = productElement.querySelector("h2").textContent.trim();
-  const message = `Quiero reservar ${encodeURIComponent(h3Content)}`;
-  const phoneNumber = "573224142500"; // Número de teléfono de Colombia
-  const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
-  window.location.href = whatsappURL;
+  if (productElement) {
+    // Se asume que el título se encuentra en un h2; ajustar si fuera otro tag
+    const h3Content = productElement.querySelector("h2")?.textContent.trim() || "";
+    const message = `Quiero reservar ${encodeURIComponent(h3Content)}`;
+    const phoneNumber = "573224142500"; // Número de teléfono en Colombia
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.location.href = whatsappURL;
+  }
 }
 
 // ======== MAS INFO ========//
 function enviarWhatsAppMasInfo(element) {
   const productElement = element.closest(".instalacion-item");
-  const h3Content = productElement.querySelector("h3").textContent.trim();
-  const message = `Requiero más información acerca de ${encodeURIComponent(
-    h3Content
-  )}`;
-  const phoneNumber = "573224142500"; // Número de teléfono de Colombia
-  const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
-  window.location.href = whatsappURL;
+  if (productElement) {
+    const h3Content = productElement.querySelector("h3")?.textContent.trim() || "";
+    const message = `Requiero más información acerca de ${encodeURIComponent(h3Content)}`;
+    const phoneNumber = "573224142500"; // Número de teléfono en Colombia
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.location.href = whatsappURL;
+  }
 }
 
 function sendWhatsAppMessage(button) {
-  var h3Text = button.closest(".image-text").querySelector("h3").innerText;
-  var message = "Quiero asesoría sobre " + h3Text;
-  var whatsappURL = "https://wa.me/?text=" + encodeURIComponent(message);
-  window.open(whatsappURL, "_blank");
+  const container = button.closest(".image-text");
+  if (container) {
+    const h3Text = container.querySelector("h3")?.innerText || "";
+    const message = "Quiero asesoría sobre " + h3Text;
+    const whatsappURL = "https://wa.me/?text=" + encodeURIComponent(message);
+    window.open(whatsappURL, "_blank");
+  }
 }
 
 function toggleImageRotation(element) {
@@ -146,19 +161,23 @@ function toggleImageRotation(element) {
 //=========== MANTENIMIENTO DE EQUIPOS =============//
 function ServiceWhatsAppMessage(button) {
   const container = button.closest(".card");
-  const title = container.querySelector("h2").innerText;
-  const phoneNumber = "573224142500";
-  const message = `Requiero servicio de ${encodeURIComponent(title)}`;
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
-  window.open(whatsappUrl, "_blank");
+  if (container) {
+    const title = container.querySelector("h2")?.innerText || "";
+    const phoneNumber = "573224142500";
+    const message = `Requiero servicio de ${encodeURIComponent(title)}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+    window.open(whatsappUrl, "_blank");
+  }
 }
 
 //=========== INTEGRACION COMERCIAL =============//
 function IntegraWhatsAppMessage(button) {
   const container = button.closest(".card");
-  const title = container.querySelector("h2").innerText;
-  const phoneNumber = "573224142500";
-  const message = `Quiero asesoría para ${encodeURIComponent(title)}`;
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
-  window.open(whatsappUrl, "_blank");
+  if (container) {
+    const title = container.querySelector("h2")?.innerText || "";
+    const phoneNumber = "573224142500";
+    const message = `Quiero asesoría para ${encodeURIComponent(title)}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+    window.open(whatsappUrl, "_blank");
+  }
 }

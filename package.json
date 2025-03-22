@@ -1,5 +1,5 @@
 {
-  "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^6.0.0"
+  "scripts": {
+    "build": "node ./js/purgecss.js && cp index.html dist/index.html"
   }
 }

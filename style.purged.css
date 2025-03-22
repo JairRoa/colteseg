@@ -1,11 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+/* Se recomienda cargar la fuente desde el HTML con:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&display=swap">
+*/
 
+/* Variables globales */
 :root {
   --color_primario: #6495ed;
   --color_primario_suave: #add8e6;
   --color_blanco: #fff;
   --altura_header: 80px;
-  --padding_left_rigth: 2rem;
+  --padding_left_right: 2rem; /* Se corrigió el nombre */
   --ancho_maximo: 1200px;
 }
 
@@ -45,7 +49,7 @@ ul {
   align-items: center;
   flex-wrap: wrap;
   position: relative;
-  padding: 0 var(--padding_left_rigth);
+  padding: 0 var(--padding_left_right);
 }
 
 .menu_hamburguesa {
@@ -82,17 +86,15 @@ ul {
   transition: all 0.3s;
 }
 
-.li_links {
-}
-
 .links {
   font-size: 3rem;
   color: var(--color_blanco);
   font-weight: bold;
 }
+
 .logo img {
-  height: 3.5rem; /* Establece la altura igual a la altura del NAVBAR */
-  width: auto; /* Permite que el ancho se ajuste automáticamente para mantener la proporción */
+  height: 3.5rem; /* Igual a la altura del NAVBAR */
+  width: auto;
 }
 
 /*========== RESPONSIVE NAVBAR =================*/
@@ -122,8 +124,8 @@ ul {
 .slider-container {
   overflow: hidden;
   width: 100%;
-  margin-top: 80px;
-  position: relative; /* Agrega posición relativa para alinear correctamente los botones absolutos */
+  margin-top: var(--altura_header);
+  position: relative;
 }
 
 .slider {
@@ -145,26 +147,21 @@ ul {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5); /* Agrega opacidad al fondo */
-  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
   font-size: 20px;
   cursor: pointer;
-  transition: transform 0.3s, color 0.3s, background-color 0.3s; /* Agrega transición de color de fondo */
-  padding: 10px; /* Ajusta el espacio interior */
-  border-radius: 50%; /* Hace que los botones sean redondos */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Agrega una sombra suave */
+  transition: transform 0.3s, color 0.3s, background-color 0.3s;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .prev-button:hover,
 .next-button:hover {
   color: var(--color_primario);
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); /* Oscurece el fondo al pasar el mouse */
-  transform: translateY(-50%) scale(1.2); /* Aplica un ligero zoom al pasar el mouse */
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.2);
 }
 
 .prev-button {
@@ -175,27 +172,25 @@ ul {
   right: 20px;
 }
 
-/*========== SLIDER RESPONSIVE ============*/
 @media (max-width: 768px) {
   .prev-button,
   .next-button {
-    font-size: 16px; /* Reduzca el tamaño de fuente en pantallas más pequeñas */
-    padding: 8px; /* Ajusta el espacio interior */
+    font-size: 16px;
+    padding: 8px;
   }
 }
 
 /*============== PRINCIPAL =====================*/
-
 .container {
   display: flex;
-  flex-wrap: wrap; /* Asegura que los elementos se ajusten correctamente */
-  justify-content: center; /* Centra los elementos horizontalmente */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .left,
 .right {
   flex: 1;
-  margin: 10px; /* Espacio entre los elementos */
+  margin: 10px;
 }
 
 .right {
@@ -205,9 +200,9 @@ ul {
 
 .content-home {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   margin: 100px;
 }
 
@@ -233,84 +228,31 @@ ul {
   margin-top: 10px;
   width: 100%;
   height: auto;
-  max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+  max-width: 100%;
   border-radius: 20px;
 }
 
+/* Ajustes responsivos para .content-home */
 @media (max-width: 1024px) {
   .content-home {
     margin: 50px;
   }
-
-  .content-home h1 {
-    font-size: 35px;
-  }
-
-  .content-home h2 {
-    font-size: 22px;
-    margin: 40px 0;
-  }
-
-  .content-home p {
-    font-size: 22px;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left,
-  .right {
-    margin: 10px 0; /* Ajusta el margen para pantallas medianas */
-    order: initial;
-  }
+  .content-home h1 { font-size: 35px; }
+  .content-home h2 { font-size: 22px; margin: 40px 0; }
+  .content-home p { font-size: 22px; }
+  .container { flex-direction: column; align-items: center; }
+  .left, .right { margin: 10px 0; order: initial; }
 }
-
 @media (max-width: 768px) {
-  .content-home {
-    margin: 20px; /* Reduce el margen para pantallas pequeñas */
-  }
-
-  .content-home h1 {
-    font-size: 30px;
-  }
-
-  .content-home h2 {
-    font-size: 20px;
-    margin: 30px 0;
-  }
-
-  .content-home p {
-    font-size: 20px;
-    margin: 0 10px; /* Ajusta el margen para pantallas pequeñas */
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left,
-  .right {
-    margin: 10px 0; /* Ajusta el margen para pantallas pequeñas */
-    order: initial;
-  }
+  .content-home { margin: 20px; }
+  .content-home h1 { font-size: 30px; }
+  .content-home h2 { font-size: 20px; margin: 30px 0; }
+  .content-home p { font-size: 20px; margin: 0 10px; }
 }
-
 @media (max-width: 480px) {
-  .content-home h1 {
-    font-size: 25px;
-  }
-
-  .content-home h2 {
-    font-size: 18px;
-    margin: 20px 0;
-  }
-
-  .content-home p {
-    font-size: 18px;
-  }
+  .content-home h1 { font-size: 25px; }
+  .content-home h2 { font-size: 18px; margin: 20px 0; }
+  .content-home p { font-size: 18px; }
 }
 
 /*=========== PRODUCTOS =============*/
@@ -318,28 +260,27 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 150px; /* Ajusta según sea necesario */
+  margin: 60px 150px 0; /* margen superior y laterales */
   border-radius: 10px;
-  margin-top: 60px;
 }
 
 .productos-imagenes {
-  flex: 0 0 calc(20% - 20px); /* Ajusta el ancho de las imágenes y el espacio entre ellas */
-  margin: 10px; /* Espacio entre las imágenes */
+  flex: 0 0 calc(20% - 20px);
+  margin: 10px;
 }
 
 .imagen-contenedor {
   position: relative;
   overflow: hidden;
   background-color: var(--color_primario_suave);
-  border-radius: 20px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .imagen-contenedor img {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease; /* Efecto de transición al pasar el mouse */
+  transition: transform 0.3s ease;
   margin-bottom: 50px;
 }
 
@@ -348,159 +289,99 @@ ul {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: var(--color_primario); /* Fondo oscuro semi-transparente */
-  color: #fff; /* Color del texto */
+  background-color: var(--color_primario);
+  color: #fff;
   padding: 10px;
   text-align: center;
   box-sizing: border-box;
-  transition: opacity 0.3s ease; /* Efecto de transición de opacidad */
-  opacity: 0.8; /* Ocultar inicialmente */
+  transition: opacity 0.3s ease;
+  opacity: 0.8;
   display: flex;
-  align-items: center; /* Centrar verticalmente */
-  justify-content: center; /* Centrar horizontalmente */
-  font-size: calc(
-    10px + 0.3vw
-  ); /* Ajusta el tamaño del texto de manera dinámica */
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 0.3vw);
 }
 
 .imagen-contenedor img:hover {
   cursor: pointer;
-  transform: scale(1.05); /* Aplica un ligero zoom al pasar el mouse */
+  transform: scale(1.05);
 }
 
 .imagen-contenedor:hover .informacion-tarjeta {
   cursor: pointer;
-  opacity: 1; /* Mostrar al pasar el mouse */
+  opacity: 1;
 }
 
-/* Estilos para pantallas medianas */
+/* Responsividad de Productos */
 @media (max-width: 1200px) {
-  .products {
-    margin: 0 100px; /* Ajusta el margen */
-  }
-
-  .productos-imagenes {
-    flex: 0 0 calc(25% - 20px); /* Ajusta el ancho para mostrar cuatro en una fila */
-  }
+  .products { margin: 0 100px; }
+  .productos-imagenes { flex: 0 0 calc(25% - 20px); }
 }
-
-/* Estilos para pantallas pequeñas */
 @media (max-width: 900px) {
-  .products {
-    margin: 0 50px; /* Ajusta el margen para pantallas pequeñas */
-    justify-content: center; /* Centrar el contenido */
-  }
-
-  .productos-imagenes {
-    flex: 0 0 calc(50% - 20px); /* Mostrar dos imágenes por fila */
-  }
+  .products { margin: 0 50px; justify-content: center; }
+  .productos-imagenes { flex: 0 0 calc(50% - 20px); }
 }
-
-/* Estilos para pantallas muy pequeñas */
 @media (max-width: 600px) {
-  .products {
-    margin: 0 20px; /* Reduce aún más el margen */
-  }
-
-  .productos-imagenes {
-    flex: 0 0 calc(100% - 20px); /* Mostrar una imagen por fila */
-  }
+  .products { margin: 0 20px; }
+  .productos-imagenes { flex: 0 0 calc(100% - 20px); }
 }
 
 /*============ INSTALACION ===============*/
-
 .instalacion {
   text-align: justify;
-  margin: 10px;
-  margin-bottom: 100px;
+  margin: 10px 0 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-/* Ajustes para dispositivos grandes */
 .instalacion-item {
-  flex: 0 0 calc(50% - 20px); /* Ajuste para que cada item ocupe el 50% del contenedor menos márgenes */
+  flex: 0 0 calc(50% - 20px);
   box-sizing: border-box;
-  margin-bottom: 40px; /* Espacio entre los items verticalmente */
+  margin-bottom: 40px;
 }
 
 .instalacion h3 {
   font-size: 30px;
   text-align: center;
-  margin-bottom: 10px;
-  margin-top: 40px;
+  margin: 40px 0 10px;
 }
 
 .instalacion img {
   display: block;
-  margin: 0 auto 20px; /* Centra la imagen horizontalmente y agrega un margen inferior */
+  margin: 0 auto 20px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  object-fit: cover; /* Asegura que la imagen cubra el área circular correctamente */
-  transition: transform 0.3s ease; /* Transición suave para el zoom */
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .instalacion img:hover {
-  transform: scale(1.1); /* Ligero zoom al pasar el mouse */
+  transform: scale(1.1);
 }
 
 .instalacion p {
   text-align: justify;
 }
 
-/* Estilos para pantallas medianas */
 @media (max-width: 1200px) {
-  .instalacion-item {
-    flex: 0 0 calc(50% - 10px); /* Ajusta el ancho para pantallas medianas */
-  }
-
-  .instalacion img {
-    width: 150px; /* Ajusta el tamaño de la imagen */
-    height: 150px;
-  }
+  .instalacion-item { flex: 0 0 calc(50% - 10px); }
+  .instalacion img { width: 150px; height: 150px; }
 }
-
-/* Estilos para pantallas pequeñas */
 @media (max-width: 900px) {
-  .instalacion {
-    margin: 0; /* Elimina márgenes exteriores para maximizar el uso del espacio */
-  }
-
-  .instalacion-item {
-    flex: 0 0 100%; /* Hace que cada item ocupe el 100% del contenedor */
-    margin-bottom: 20px; /* Espacio entre los items verticalmente */
-  }
-
-  .instalacion img {
-    width: 150px; /* Ajusta el tamaño de la imagen */
-    height: 150px;
-    margin-bottom: 10px; /* Ajusta el margen inferior para un mejor espaciado en pantallas pequeñas */
-  }
-
-  .instalacion p {
-    margin: 0 10px; /* Ajusta el margen para maximizar el uso del espacio de pantalla */
-  }
+  .instalacion { margin: 0; }
+  .instalacion-item { flex: 0 0 100%; margin-bottom: 20px; }
+  .instalacion img { width: 150px; height: 150px; margin-bottom: 10px; }
+  .instalacion p { margin: 0 10px; }
 }
-
-/* Estilos para pantallas muy pequeñas */
 @media (max-width: 600px) {
-  .instalacion h3 {
-    font-size: 24px; /* Ajusta el tamaño del texto */
-  }
-
-  .instalacion img {
-    width: 100px; /* Ajusta el tamaño de la imagen */
-    height: 100px;
-  }
-
-  .instalacion p {
-    font-size: 14px; /* Ajusta el tamaño del texto */
-  }
+  .instalacion h3 { font-size: 24px; }
+  .instalacion img { width: 100px; height: 100px; }
+  .instalacion p { font-size: 14px; }
 }
 
-/* ========== MONITOREO =========== */
+/* ========== MONITOREO ===========*/
 .monitoreo {
   background: linear-gradient(
       to top,
@@ -511,7 +392,7 @@ ul {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 120%;
+  width: 100%; /* Se ajusta a 100% para evitar overflow innecesario */
   min-height: 100vh;
   color: #fff;
   display: flex;
@@ -521,8 +402,7 @@ ul {
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
-  margin: 0; /* Asegura que no haya márgenes por defecto */
-  padding: 0; /* Asegura que no haya relleno por defecto */
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -548,7 +428,7 @@ ul {
   font-size: 2.5rem;
   color: var(--color_primario_suave);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
-    -10px -10px 20px rgba(255, 255, 255, 0.5);
+               -10px -10px 20px rgba(255, 255, 255, 0.5);
   margin: 30px 0;
   max-width: 90%;
   word-break: break-word;
@@ -572,18 +452,9 @@ ul {
 }
 
 @media (max-width: 900px) {
-  .monitoreo h3 {
-    font-size: 2rem;
-  }
-
-  .monitoreo a {
-    font-size: 2rem;
-    margin: 20px 0;
-  }
-
-  .monitoreo i {
-    font-size: 2.5rem;
-  }
+  .monitoreo h3 { font-size: 2rem; }
+  .monitoreo a { font-size: 2rem; margin: 20px 0; }
+  .monitoreo i { font-size: 2.5rem; }
 }
 
 /*=========== SERVICIOS ============*/
@@ -594,8 +465,8 @@ ul {
 }
 
 #servicios h2 {
-  font-size: 3.125rem; /* Equivalente a 50px */
-  margin-top: -0.9375rem; /* Ajusta el margen superior para superponer el título */
+  font-size: 3.125rem;
+  margin-top: -0.9375rem;
 }
 
 #servicios a {
@@ -606,15 +477,15 @@ ul {
 .titulo-servicios {
   width: 100%;
   text-align: center;
-  margin-bottom: 1.25rem; /* Equivalente a 20px */
+  margin-bottom: 1.25rem;
 }
 
 .servicio {
   width: calc(25% - 20px);
-  margin-bottom: 1.25rem; /* Equivalente a 20px */
+  margin-bottom: 1.25rem;
   padding: 10px;
   box-sizing: border-box;
-  text-align: center; /* Centra el contenido horizontalmente */
+  text-align: center;
 }
 
 .servicio img {
@@ -630,36 +501,25 @@ ul {
 }
 
 .servicio h3 {
-  font-size: 1.25rem; /* Equivalente a 20px */
-  margin-top: 0.625rem; /* Equivalente a 10px */
+  font-size: 1.25rem;
+  margin-top: 0.625rem;
 }
 
 .servicio p {
-  font-size: 1rem; /* Equivalente a 16px */
-  margin-top: 0.625rem; /* Equivalente a 10px */
+  font-size: 1rem;
+  margin-top: 0.625rem;
 }
 
-/* Media query para pantallas medianas */
 @media (max-width: 768px) {
-  #servicios {
-    justify-content: center;
-    margin-top: 5.625rem; /* Equivalente a 90px */
-  }
-
-  .servicio {
-    width: calc(50% - 20px); /* Dos tarjetas por fila */
-  }
+  #servicios { justify-content: center; margin-top: 5.625rem; }
+  .servicio { width: calc(50% - 20px); }
 }
 
-/* Media query para pantallas pequeñas */
 @media (max-width: 480px) {
-  .servicio {
-    width: calc(100% - 20px); /* Una tarjeta por fila */
-  }
+  .servicio { width: calc(100% - 20px); }
 }
 
 /*========== CONTACTO =================*/
-/* Estilo general para el contenedor */
 .contacto {
   background: linear-gradient(
       to top,
@@ -667,19 +527,19 @@ ul {
       rgb(7, 126, 195)
     ),
     url("img/wallpaper.webp");
-  background-size: cover; /* Asegura que el fondo cubra todo el contenedor */
-  background-position: center; /* Centra la imagen de fondo */
-  background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
-  display: flex; /* Añadido display: flex */
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 100px; /* Ajuste de padding para proporcionar espacio interior */
+  padding: 50px 100px;
   box-sizing: border-box;
-  text-align: center; /* Asegura que el texto esté centrado */
+  text-align: center;
   width: 100%;
-  min-height: 70vh; /* Asegura que el contenedor ocupe al menos la altura de la ventana */
+  min-height: 70vh;
 }
 
 .contacto h2 {
@@ -696,7 +556,7 @@ ul {
   justify-content: space-between;
   align-items: flex-start;
   gap: 50px;
-  flex-wrap: wrap; /* Para reorganizar en pantallas pequeñas */
+  flex-wrap: wrap;
 }
 
 .contacto-form {
@@ -734,9 +594,7 @@ ul {
   outline: none;
 }
 
-.contacto-form textarea {
-  height: 100px;
-}
+.contacto-form textarea { height: 100px; }
 
 .contacto-form button[type="submit"] {
   background-color: #007bff;
@@ -747,7 +605,7 @@ ul {
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: block;
-  margin: 20px auto; /* Centra el botón de envío */
+  margin: 20px auto;
   font-size: 20px;
 }
 
@@ -755,10 +613,7 @@ ul {
   background-color: #0056b3;
 }
 
-.contacto-img {
-  flex: 1;
-  text-align: center;
-}
+.contacto-img { flex: 1; text-align: center; }
 
 .contacto-img img {
   max-width: 100%;
@@ -784,58 +639,35 @@ ul {
   font-size: 20px;
 }
 
-.whatsapp-btn:hover {
-  background-color: #128c7e;
-}
+.whatsapp-btn:hover { background-color: #128c7e; }
 
-/* Estilos para pantallas pequeñas */
 @media (max-width: 900px) {
   .contacto-container {
     flex-direction: column;
     align-items: center;
   }
-
-  .contacto-form {
-    max-width: 90%;
-    margin-bottom: 20px;
-  }
-
-  .contacto-img,
-  .contacto-whatsapp {
-    text-align: center;
-  }
-
-  .contacto-img img {
-    margin: 0 auto;
-    max-width: 90%;
-  }
-
-  .whatsapp-btn {
-    width: 100%;
-  }
+  .contacto-form { max-width: 90%; margin-bottom: 20px; }
+  .contacto-img, .contacto-whatsapp { text-align: center; }
+  .contacto-img img { margin: 0 auto; max-width: 90%; }
+  .whatsapp-btn { width: 100%; }
 }
 
 /*============= FOOTER ==============*/
 footer {
-  background-color: #333; /* Fondo gris */
-  color: #fff; /* Letra blanca */
-  padding: 20px 0; /* Espaciado interior */
-  display: flex; /* Mostrar elementos como fila */
-  justify-content: center; /* Centrar elementos horizontalmente */
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
 }
 
-.info-contacto {
-  display: flex; /* Mostrar columnas */
-}
+.info-contacto { display: flex; }
 
-.info-contacto p {
-  margin: 0 80px; /* Espacio entre los elementos de texto */
-}
+.info-contacto p { margin: 0 80px; }
 
-/* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
   .info-contacto p {
-    margin: 0 20px; /* Espacio entre los elementos de texto */
+    margin: 0 20px;
     font-size: 2vw;
   }
 }
