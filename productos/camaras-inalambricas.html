@@ -8,36 +8,17 @@
       content="COLTESEG ofrece sistemas de seguridad completos y personalizados para hogares y negocios en Bogotá. Cámaras de seguridad, alarmas, automatización y más."
     />
     <title>COLTESEG - Cámaras Inalámbricas</title>
-       <!-- Google tag (gtag.js) -->
-       <script
-       async
-       src="https://www.googletagmanager.com/gtag/js?id=G-CFYGX74T1Y"
-     ></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag() {
-         dataLayer.push(arguments);
-       }
-       gtag("js", new Date());
- 
-       gtag("config", "G-CFYGX74T1Y");
-     </script>
- 
-     <!-- Google tag (gtag.js) -->
-     <script
-       async
-       src="https://www.googletagmanager.com/gtag/js?id=AW-16582255579"
-     ></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag() {
-         dataLayer.push(arguments);
-       }
-       gtag("js", new Date());
- 
-       gtag("config", "AW-16582255579");
-     </script>
- 
+
+    <!-- Google tag (gtag.js) unificado -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFYGX74T1Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-CFYGX74T1Y");
+      gtag("config", "AW-16582255579");
+    </script>
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -53,8 +34,8 @@
     </script>
     <!-- End Google Tag Manager -->
 
-
-    <link rel="icon" href="../img/logo.webp" type="image/x-icon" />
+    <!-- Favicon -->
+    <link rel="icon" href="/img/logo.webp" type="image/x-icon" />
     <link rel="canonical" href="https://colteseg.netlify.app/" />
     <meta
       name="keywords"
@@ -67,16 +48,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="icon" type="image/webp" href="img/icon.webp" />
+    <!-- Hoja de estilos para enlaces de productos -->
     <link rel="stylesheet" href="/productos/style-links.css" />
   </head>
   <body>
-    <header> 
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5ZLWHDVV"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
+
+    <header>
       <h1>Sistemas de Vigilancia y Cámaras inalámbricas en Bogotá</h1>
       <p style="color: #fff; font-size: 24px">
         Encuentra la mejor opción para tu seguridad
       </p>
     </header>
+
     <section class="product-catalog">
       <div class="product">
         <img
@@ -87,7 +79,10 @@
         <h2>CÁMARA WIFI DAHUA IMOU CAMIP 1080P 360°</h2>
         <h3>$250.000</h3>
         <p>Cámara de seguridad inalámbrica con wifi, sonido y movimiento 360°.</p>
-        <p><strong>INSTALACIÓN GRATIS</strong><p style="font-size: 12px;">*solo para Bogotá</p></p>
+        <p>
+          <strong>INSTALACIÓN GRATIS</strong>
+          <span style="font-size: 12px;">*solo para Bogotá</span>
+        </p>
         <button onclick="enviarWhatsApp(this)">Reservar</button>
       </div>
       <div class="product">
@@ -98,10 +93,11 @@
         />
         <h2>CÁMARA WIFI DAHUA IMOU CUE 1080P</h2>
         <h3>$150.000</h3>
+        <p>Cámara de seguridad fija, inalámbrica con wifi. Visión nocturna.</p>
         <p>
-          Cámara de seguridad fija, inalámbrica con wifi. Visión nocturna.
+          <strong>INSTALACIÓN GRATIS</strong>
+          <span style="font-size: 12px;">*solo para Bogotá</span>
         </p>
-        <p><strong>INSTALACIÓN GRATIS</strong><p style="font-size: 12px;">*solo para Bogotá</p></p>
         <button onclick="enviarWhatsApp(this)">Reservar</button>
       </div>      
       <div class="product">
@@ -113,7 +109,10 @@
         <h2>CÁMARA WIFI EZVIZ C6N 1080P 360°</h2>
         <h3>$160.000</h3>
         <p>Cámara de seguridad inalámbrica con wifi, sonido y movimiento 360°.</p>
-        <p><strong>INSTALACIÓN GRATIS</strong><p style="font-size: 12px;">*solo para Bogotá</p></p>
+        <p>
+          <strong>INSTALACIÓN GRATIS</strong>
+          <span style="font-size: 12px;">*solo para Bogotá</span>
+        </p>
         <button onclick="enviarWhatsApp(this)">Reservar</button>
       </div>
       <div class="product">
@@ -125,20 +124,22 @@
         <h2>CÁMARA WIFI EZVIZ C2C 1080P</h2>
         <h3>$120.000</h3>
         <p>Cámara de seguridad fija, inalámbrica con wifi. Visión nocturna.</p>
-        <p><strong>INSTALACIÓN GRATIS</strong><p style="font-size: 12px;">*solo para Bogotá</p></p>
+        <p>
+          <strong>INSTALACIÓN GRATIS</strong>
+          <span style="font-size: 12px;">*solo para Bogotá</span>
+        </p>
         <button onclick="enviarWhatsApp(this)">Reservar</button>
       </div>
     </section>
 
-      <!--  VOLVER  -->
-      <section id="volver" class="volver">
-        <h1>VUELVE AL INICIO</h1>
-        <a href="/index.html">
-          <i class="fa-solid fa-circle-arrow-left"></i>
-        </a>
-      </section>
+    <!-- VOLVER -->
+    <section id="volver" class="volver">
+      <h1>VUELVE AL INICIO</h1>
+      <a href="/index.html">
+        <i class="fa-solid fa-circle-arrow-left"></i>
+      </a>
+    </section>
 
-
-    <script src="../script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

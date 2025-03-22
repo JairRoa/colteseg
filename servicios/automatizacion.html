@@ -4,44 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>COLTESEG - Automatización y Domótica</title>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CFYGX74T1Y"
-    ></script>
+    <meta
+      name="description"
+      content="COLTESEG ofrece soluciones de automatización y domótica residencial y comercial en Bogotá. Descubre cómo integrar tus dispositivos y optimizar tu vida."
+    />
+    <meta
+      name="keywords"
+      content="automatización, domótica, control, integración, hogar, empresa, Bogotá"
+    />
+    <link rel="canonical" href="https://colteseg.netlify.app/" />
+
+    <!-- Google tag (gtag.js) unificado -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFYGX74T1Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag(){ dataLayer.push(arguments); }
       gtag("js", new Date());
-
       gtag("config", "G-CFYGX74T1Y");
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-16582255579"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
       gtag("config", "AW-16582255579");
     </script>
 
     <!-- Google Tag Manager -->
     <script>
-      (function (w, d, s, l, i) {
+      (function(w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
@@ -49,17 +39,11 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    <meta
-      name="description"
-      content="COLTESEG ofrece sistemas de seguridad completos y personalizados para hogares y negocios en Bogotá. Cámaras de seguridad, alarmas, automatización y más."
-    />
-    <meta
-      name="keywords"
-      content="cámaras de seguridad, sistemas de seguridad, alarmas, Bogotá, automatización, domótica"
-    />
-    <link rel="icon" href="img/logo.webp" type="image/x-icon" />
-    <link rel="icon" type="image/webp" href="img/icon.webp" />
-    <link rel="canonical" href="https://colteseg.netlify.app/" />
+    <!-- Favicon e Icono -->
+    <link rel="icon" href="/img/logo.webp" type="image/x-icon" />
+    <link rel="icon" type="image/webp" href="/img/icon.webp" />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -67,36 +51,33 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Hoja de estilos externa -->
     <link rel="stylesheet" href="/servicios/styles-services.css" />
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZLWHDVV"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
     <section id="automatizacion" class="automatizacion">
       <div class="container">
         <div class="title">
           <h1>Automatización y Domótica Residencial y Comercial</h1>
         </div>
         <div class="image-grid">
+          <!-- Cada image-item incluye un título con estilos inline para destacar, la imagen y una descripción -->
           <div class="image-item" onclick="toggleImageRotation(this)">
-            <h2
-              style="
-                text-align: center;
-                color: #ffffff;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-              "
-            >
+            <h2 style="text-align: center; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
               Automatización de Hogares
             </h2>
-            <img src="/img/automatizacion-casa1.webp" alt="Imagen 1" />
+            <img src="/img/automatizacion-casa1.webp" alt="Automatización de Hogares" />
             <div class="image-text">
               <h3>Automatización de Hogares</h3>
               <p>
-                ¡Descubre la automatización de vanguardia con nosotros! Llevamos
-                tu hogar al siglo XXI mejorando el rendimiento de tus
-                dispositivos e integrándolos en un sistema único controlado
-                desde tu celular. Desde sistemas de seguridad básicos hasta un
-                completo centro de entretenimiento, incluso la apertura de
-                puertas si algún miembro de la familia está afuera mientras no
-                estás.
+                ¡Descubre la automatización de vanguardia con nosotros! Llevamos tu hogar al siglo XXI, mejorando el rendimiento de tus dispositivos e integrándolos en un sistema único controlado desde tu celular. Desde sistemas básicos de seguridad hasta un completo centro de entretenimiento, incluso la apertura de puertas.
               </p>
               <button class="more-info-btn" onclick="sendWhatsAppMessage(this)">
                 Más información
@@ -104,26 +85,14 @@
             </div>
           </div>
           <div class="image-item" onclick="toggleImageRotation(this)">
-            <h2
-              style="
-                text-align: center;
-                color: #ffffff;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-              "
-            >
+            <h2 style="text-align: center; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
               Domótica Comercial
             </h2>
-            <img src="/img/domotica-comercial.webp" alt="Imagen 2" />
+            <img src="/img/domotica-comercial.webp" alt="Domótica Comercial" />
             <div class="image-text">
               <h3>Domótica Comercial</h3>
               <p>
-                Integra completamente tu empresa o negocio con nuestras
-                soluciones avanzadas. Controla la seguridad, los recursos
-                multimedia y las instalaciones de tu negocio desde un solo
-                dispositivo. Utiliza nuestro software especializado para
-                estandarizar procesos, gestionar personal y mantener una
-                vigilancia permanente con alertas continuas sobre el desempeño
-                de tu negocio.
+                Integra completamente tu empresa o negocio con nuestras soluciones avanzadas. Controla la seguridad, recursos multimedia e instalaciones desde un solo dispositivo, estandarizando procesos y gestionando personal con alertas continuas.
               </p>
               <button class="more-info-btn" onclick="sendWhatsAppMessage(this)">
                 Más información
@@ -131,25 +100,14 @@
             </div>
           </div>
           <div class="image-item" onclick="toggleImageRotation(this)">
-            <h2
-              style="
-                text-align: center;
-                color: #ffffff;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-              "
-            >
+            <h2 style="text-align: center; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
               Integración de Sistemas
             </h2>
-            <img src="/img/automatizacion-casa.webp" alt="Imagen 3" />
+            <img src="/img/automatizacion-casa.webp" alt="Integración de Sistemas" />
             <div class="image-text">
               <h3>Integración de Sistemas</h3>
               <p>
-                Olvídate de los múltiples controles remotos y simplifica tu vida
-                integrando todos tus dispositivos en tu celular. Controla tu
-                hogar, empresa o negocio desde cualquier lugar. Gestiona varios
-                sistemas y una infinidad de equipos fácilmente desde la palma de
-                tu mano. Actualízate y optimiza tu tiempo y recursos con
-                nuestras soluciones avanzadas.
+                Olvídate de múltiples controles remotos y simplifica tu vida integrando todos tus dispositivos en tu celular. Controla tu hogar, empresa o negocio desde cualquier lugar y gestiona numerosos sistemas desde la palma de tu mano.
               </p>
               <button class="more-info-btn" onclick="sendWhatsAppMessage(this)">
                 Más información
@@ -157,24 +115,14 @@
             </div>
           </div>
           <div class="image-item" onclick="toggleImageRotation(this)">
-            <h2
-              style="
-                text-align: center;
-                color: #ffffff;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-              "
-            >
+            <h2 style="text-align: center; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
               Asesoramiento Personalizado
             </h2>
-            <img src="/img/asesoria-automatizacion.webp" alt="Imagen 4" />
+            <img src="/img/asesoria-automatizacion.webp" alt="Asesoramiento Personalizado" />
             <div class="image-text">
               <h3>Asesoramiento Personalizado</h3>
               <p>
-                Si no sabes por dónde comenzar, nosotros te guiamos. Te
-                asesoramos desde la gestión de la idea hasta su desarrollo,
-                incluyendo la elaboración del presupuesto necesario para
-                alcanzar tus objetivos. Comienza con nosotros y haz realidad tus
-                proyectos.
+                Si no sabes por dónde comenzar, nosotros te guiamos. Te asesoramos desde la idea hasta su desarrollo, incluyendo el presupuesto necesario para alcanzar tus objetivos. ¡Haz realidad tus proyectos con nosotros!
               </p>
               <button class="more-info-btn" onclick="sendWhatsAppMessage(this)">
                 Más información
@@ -187,13 +135,11 @@
 
     <section id="catalog" class="catalog">
       <h2>
-        Conoce algunos de nuestros productos de automatización con los que
-        podremos comenzar tu idea.
+        Conoce algunos de nuestros productos de automatización para comenzar tu idea.
       </h2>
       <a href="/productos/automatizacion-en-bogota.html" class="button-link">
         <button>
-          <i class="fa-solid fa-angles-right"></i> CATÁLOGO
-          <i class="fa-solid fa-angles-left"></i>
+          <i class="fa-solid fa-angles-right"></i> CATÁLOGO <i class="fa-solid fa-angles-left"></i>
         </button>
       </a>
     </section>

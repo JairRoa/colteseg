@@ -1,63 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="COLTESEG cotiza tu servicio de instalación en Bogotá"
+      content="COLTESEG - Cotiza la instalación de tu sistema de seguridad en Bogotá."
     />
     <title>COTIZA - Cámaras para Hogares y Negocios en Bogotá</title>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CFYGX74T1Y"
-    ></script>
+
+    <!-- Google tag (gtag.js) unificado -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFYGX74T1Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag(){ dataLayer.push(arguments); }
       gtag("js", new Date());
-
       gtag("config", "G-CFYGX74T1Y");
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-16582255579"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
       gtag("config", "AW-16582255579");
     </script>
 
     <!-- Google Tag Manager -->
     <script>
-      (function (w, d, s, l, i) {
+      (function(w, d, s, l, i) {
         w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
+          dl = l != 'dataLayer' ? '&l=' + l : '';
         j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-5ZLWHDVV");
+      })(window, document, 'script', 'dataLayer', 'GTM-5ZLWHDVV');
     </script>
     <!-- End Google Tag Manager -->
 
+    <!-- Favicon -->
     <link rel="icon" href="../img/logo.webp" type="image/x-icon" />
+
     <meta
       name="keywords"
-      content="cámaras de seguridad, sistemas de seguridad, alarmas, Bogotá"
+      content="cámaras de seguridad, sistemas de seguridad, alarmas, Bogotá, instalación, cotización"
     />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -65,10 +50,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="icon" type="image/webp" href="img/icon.webp" />
+
+    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="/productos/style-links.css" />
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5ZLWHDVV"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+
     <section id="cotiza" class="cotiza">
       <h2>Cotiza la instalación de tu sistema de seguridad en Bogotá</h2>
       <form id="calculator-form">
@@ -202,7 +198,10 @@
             <option value="alarma 5" data-precio="50000">
               SENSOR DE HUMO, GAS Y/O CO2 SISDATA
             </option>
-            <option value="sensor de movimiento Flux 120" data-precio="120000">
+            <option
+              value="sensor de movimiento Flux 120"
+              data-precio="120000"
+            >
               Sensor de movimiento Flux 120
             </option>
             <option
@@ -238,8 +237,8 @@
         <button type="button" id="calcular">Calcular</button>
       </form>
       <h4>
-        *Valores aproximados que no implican un valor final para la instalación
-        sino un estimado. Para mas información comuníquese con el área de
+        *Valores aproximados que no implican un valor final para la instalación,
+        sino un estimado. Para más información, comuníquese con el área de
         ventas.
       </h4>
     </section>
@@ -251,6 +250,7 @@
       </a>
     </section>
 
+    <!-- Script principal -->
     <script src="/script.js"></script>
   </body>
 </html>

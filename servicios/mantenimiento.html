@@ -2,39 +2,32 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <!-- Adaptación para móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COLTESEG - Mantenimiento de Equipos Informáticos en Bogotá</title>
+    
+    <!-- Meta Description y Keywords -->
     <meta
       name="description"
       content="COLTESEG ofrece servicios de mantenimiento de equipos informáticos en Bogotá. Optimizamos y resolvemos problemas en sistemas operativos Windows, macOS y Linux. ¡Confía en nosotros para mejorar el rendimiento de tus dispositivos!"
     />
-    <title>COLTESEG - Mantenimiento de Equipos Informáticos en Bogotá</title>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CFYGX74T1Y"
-    ></script>
+    <meta
+      name="keywords"
+      content="mantenimiento de equipos informáticos, Bogotá, sistemas operativos, computadoras, celulares, impresoras, videobeam, instalaciones eléctricas"
+    />
+    <link rel="canonical" href="https://colteseg.netlify.app/" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo.webp" type="image/x-icon" />
+    <link rel="icon" type="image/webp" href="img/icon.webp" />
+
+    <!-- Google tag (gtag.js) unificado -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFYGX74T1Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
-
       gtag("config", "G-CFYGX74T1Y");
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-16582255579"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
       gtag("config", "AW-16582255579");
     </script>
 
@@ -45,7 +38,7 @@
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
+          dl = l !== "dataLayer" ? "&l=" + l : "";
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
@@ -53,13 +46,7 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    <meta
-      name="keywords"
-      content="mantenimiento de equipos informáticos, Bogotá, sistemas operativos, computadoras, celulares, impresoras, videobeam, instalaciones eléctricas"
-    />
-    <link rel="icon" href="img/logo.webp" type="image/x-icon" />
-    <link rel="icon" type="image/webp" href="img/icon.webp" />
-    <link rel="canonical" href="https://colteseg.netlify.app/" />
+    <!-- Font Awesome para íconos -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -67,148 +54,82 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Hoja de estilos personalizada -->
     <link rel="stylesheet" href="/servicios/styles-services.css" />
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5ZLWHDVV"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <section id="title" class="titlemantenimiento">
       <h1>Mantenimiento de Equipos Informáticos en Bogotá</h1>
     </section>
 
     <section id="mantenimiento" class="mantenimiento">
       <div class="card">
-        <img
-          src="/img/mantenimiento de computador3.webp"
-          alt="mantenimiento de computadres"
-        />
+        <img src="/img/mantenimiento de computador3.webp" alt="Mantenimiento de equipos informáticos" />
         <h2>Mantenimiento de Equipos</h2>
         <p>
-          Mejora el rendimiento de tus equipos informáticos en Bogotá con
-          nuestros servicios de mantenimiento. Nos especializamos en optimizar y
-          resolver problemas en sistemas operativos Windows, macOS y Linux. Ya
-          sea que tus computadoras estén lentas, emitiendo sonidos extraños o
-          necesiten actualizaciones, nuestro equipo se encargará de mejorar su
-          funcionamiento. Ahorra en costos de adquisición de nuevos equipos y
-          enfócate en lo que realmente importa: tu negocio.
+          Mejora el rendimiento de tus equipos informáticos en Bogotá con nuestros servicios de mantenimiento. Nos especializamos en optimizar y resolver problemas en sistemas operativos Windows, macOS y Linux. Ya sea que tus computadoras estén lentas, emitan sonidos extraños o necesiten actualizaciones, nuestro equipo se encargará de mejorar su funcionamiento. Ahorra en costos de adquisición de nuevos equipos y enfócate en lo que realmente importa: tu negocio.
         </p>
-        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">
-          Más información
-        </button>
+        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">Más información</button>
       </div>
       <div class="card">
-        <img
-          src="/img/mantenimiento de computador1.webp"
-          alt="mantenimiento de computadores"
-        />
+        <img src="/img/mantenimiento de computador1.webp" alt="Mantenimiento de computadoras" />
         <h2>Mantenimiento de Computadores</h2>
         <p>
-          ¿Tu equipo informático necesita una puesta a punto? Realizamos
-          desmontaje, limpieza física, mejora de refrigeración y cambio de
-          piezas obsoletas o dañadas para rescatar tus equipos y ahorrarte
-          dinero en la compra de nuevos. No pierdas información valiosa. Confía
-          en nuestro equipo experto de técnicos en computadoras para salvar tus
-          equipos informáticos.
+          ¿Tu equipo informático necesita una puesta a punto? Realizamos desmontaje, limpieza física, mejora de refrigeración y cambio de piezas obsoletas o dañadas para rescatar tus equipos y ahorrarte dinero en la compra de nuevos. No pierdas información valiosa. Confía en nuestro equipo experto para salvar tus equipos.
         </p>
-        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">
-          Más información
-        </button>
+        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">Más información</button>
       </div>
       <div class="card">
-        <img
-          src="/img/mantenimiento de celulares.webp"
-          alt="mantenimiento de celulares"
-        />
+        <img src="/img/mantenimiento de celulares.webp" alt="Mantenimiento y reparación de celulares" />
         <h2>Mantenimiento y Reparación de Celulares</h2>
         <p>
-          tus celulares personales o corporativos están experimentando lentitud,
-          fallos o sospechas de vulnerabilidad en cuanto a seguridad, deja en
-          nuestras manos la optimización de tus equipos. Ya sea que la pantalla
-          esté rota, experimentes problemas de audio, dificultades de navegación
-          u otros inconvenientes, nuestro equipo se encargará de dejar tu
-          dispositivo como nuevo. Confía en nosotros para recuperar la
-          funcionalidad y seguridad de tus dispositivos móviles.
+          Si tus celulares presentan lentitud, fallos o problemas de seguridad, déjalos en nuestras manos. Ya sea que la pantalla esté rota, haya problemas de audio o de navegación, nuestro equipo los dejará como nuevos. Recupera la funcionalidad y seguridad de tus dispositivos móviles.
         </p>
-        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">
-          Más información
-        </button>
+        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">Más información</button>
       </div>
       <div class="card">
-        <img
-          src="/img/mantenimiento de celulares1.webp"
-          alt="mantenimiento de celulares"
-        />
+        <img src="/img/mantenimiento de celulares1.webp" alt="Bloqueo de celulares" />
         <h2>Bloqueo de Celulares</h2>
         <p>
-          Así como con tus equipos de cómputo, si deseas restringir el acceso de
-          tus celulares corporativos a ciertas funciones, aplicaciones o páginas
-          web para optimizar la productividad de tu equipo y prevenir
-          distracciones o vulneraciones a la seguridad de la información,
-          nosotros podemos brindarte toda la asistencia técnica necesaria para
-          proteger tus dispositivos y garantizar que se utilicen exclusivamente
-          para sus funciones corporativas principales.
+          Si deseas restringir el acceso de tus celulares corporativos a ciertas funciones o aplicaciones para optimizar la productividad y prevenir vulnerabilidades, nosotros te brindamos la asistencia necesaria para proteger tus dispositivos.
         </p>
-        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">
-          Más información
-        </button>
+        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">Más información</button>
       </div>
       <div class="card">
-        <img
-          src="/img/mantenimiento de impresoras.webp"
-          alt="mantenimiento de impresoras"
-        />
+        <img src="/img/mantenimiento de impresoras.webp" alt="Mantenimiento de impresoras" />
         <h2>Mantenimiento de Impresoras</h2>
         <p>
-          Si tus impresoras no están funcionando correctamente, nosotros nos
-          encargamos de optimizarlas. Realizamos mantenimiento a impresoras de
-          cartuchos, cinta, tóner o recarga de tinta, asegurando su correcto
-          funcionamiento para que no pierdan funcionalidad y tú no pierdas
-          dinero. Somos expertos en todas las marcas y modelos. Además, podemos
-          integrarlas en una misma red para que todos los colaboradores puedan
-          acceder a ellas y bloquear impresiones no autorizadas, reduciendo
-          desperdicios y gastos innecesarios. Confía en nosotros para mantener
-          tus dispositivos de impresión en óptimas condiciones.
+          Realizamos mantenimiento a impresoras de cartuchos, cinta, tóner o recarga de tinta, asegurando su correcto funcionamiento y prolongando su vida útil. Además, podemos integrarlas en una red para permitir el acceso de colaboradores y bloquear impresiones no autorizadas.
         </p>
-        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">
-          Más información
-        </button>
+        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">Más información</button>
       </div>
       <div class="card">
-        <img
-          src="/img/mantenimiento de videbeam.webp"
-          alt="mantenimiento de videobeam"
-        />
+        <img src="/img/mantenimiento de videbeam.webp" alt="Mantenimiento de videobeam y proyectores" />
         <h2>Mantenimiento de Videobeam y Proyectores</h2>
         <p>
-          ¿Tu videoproyector ya no ofrece la misma calidad de imagen que antes?
-          Tal vez sea hora de cambiar su lámpara, limpiarlo o realizar un
-          mantenimiento general. Confía en nosotros para recuperar tu equipo y
-          prolongar su vida útil, ahorrándote así el gasto de adquirir un
-          proyector nuevo. Somos expertos en todo tipo de proyectores y contamos
-          con repuestos de primera calidad que devolverán a tu videoproyector su
-          brillo original. Deja tu equipo en nuestras manos y sigue disfrutando
-          de su uso por mucho más tiempo.
+          ¿Tu videoproyector ya no ofrece la misma calidad de imagen? Tal vez sea hora de cambiar su lámpara, limpiarlo o realizar un mantenimiento general. Confía en nosotros para recuperar tu equipo y prolongar su vida útil.
         </p>
-        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">
-          Más información
-        </button>
+        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">Más información</button>
       </div>
       <div class="card">
-        <img
-          src="/img/mantenimiento electrico.webp"
-          alt="mantenimiento eectrico"
-        />
-        <h2>Mantenimiento de Instalaciones eléctricas</h2>
+        <img src="/img/mantenimiento electrico.webp" alt="Mantenimiento de instalaciones eléctricas" />
+        <h2>Mantenimiento de Instalaciones Eléctricas</h2>
         <p>
-          No arriesgues la seguridad de tus instalaciones ni sufras por excesos
-          de consumo debido a fallas eléctricas. Somos expertos en instalaciones
-          eléctricas y paneles de control. Nuestros técnicos están capacitados
-          para asesorarte en todo lo necesario para unificar o dividir las zonas
-          eléctricas, proporcionándote las herramientas necesarias para una
-          instalación segura y certificada. Confía en nosotros para garantizar
-          la seguridad y eficiencia eléctrica de tus instalaciones.
+          No arriesgues la seguridad de tus instalaciones ni sufras por excesos de consumo debido a fallas eléctricas. Nuestros técnicos te asesorarán para unificar o dividir las zonas eléctricas, garantizando una instalación segura y certificada.
         </p>
-        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">
-          Más información
-        </button>
+        <button class="more-info-btn" onclick="ServiceWhatsAppMessage(this)">Más información</button>
       </div>
     </section>
 
